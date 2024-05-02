@@ -1,0 +1,15 @@
+module RisingEdgeDetector ( input clk , input in , output out );
+	reg prev = 0; // State
+	wire next_prev ;
+	
+	// Flip -flop
+	always @( posedge clk)
+		prev <= next_prev;
+		
+	// Next - state logic
+	assign next_prev = in;
+	
+	// Output logic
+	assign out = (!prev && in);
+	
+endmodule
