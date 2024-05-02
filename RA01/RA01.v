@@ -89,19 +89,19 @@ output reg [2: 0] out, select);
 				select <= 3'b000;
 			end
 			2: begin 
-				if(ms < 200) 
+				if(ms < 100 || ((ms >= 500) &&(ms < 600))) 
 					out <= 3'b110;
 				else out <= 3'b111;
 				select <= 3'b001;
 			end
 			3: begin 
-				if(ms < 200) 
+				if(ms < 100 || ((ms >= 500) &&(ms < 600))) 
 					out <= 3'b101;
 				else out <= 3'b111;
 				select <= 3'b010;
 			end
 			4: begin 
-				if(ms < 200) 
+				if(ms < 100 || ((ms >= 500) &&(ms < 600))) 
 					out <= 3'b011;
 				else out <= 3'b111;
 				select <= 3'b100;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RA01
-Thu May  2 15:04:47 2024
+Thu May  2 20:01:36 2024
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu May  2 15:04:47 2024          ;
+; Analysis & Synthesis Status     ; Successful - Thu May  2 20:01:36 2024          ;
 ; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                   ; RA01                                           ;
 ; Top-level Entity Name           ; RA01                                           ;
@@ -222,14 +222,14 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 403            ;
+; Estimate of Logic utilization (ALMs needed) ; 425            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 765            ;
+; Combinational ALUT usage for logic          ; 808            ;
 ;     -- 7 input functions                    ; 1              ;
-;     -- 6 input functions                    ; 38             ;
-;     -- 5 input functions                    ; 70             ;
-;     -- 4 input functions                    ; 108            ;
-;     -- <=3 input functions                  ; 548            ;
+;     -- 6 input functions                    ; 39             ;
+;     -- 5 input functions                    ; 68             ;
+;     -- 4 input functions                    ; 121            ;
+;     -- <=3 input functions                  ; 579            ;
 ;                                             ;                ;
 ; Dedicated logic registers                   ; 182            ;
 ;                                             ;                ;
@@ -239,8 +239,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 182            ;
-; Total fan-out                               ; 3038           ;
-; Average fan-out                             ; 2.92           ;
+; Total fan-out                               ; 3173           ;
+; Average fan-out                             ; 2.93           ;
 +---------------------------------------------+----------------+
 
 
@@ -249,7 +249,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |RA01                                     ; 765 (2)             ; 182 (0)                   ; 0                 ; 0          ; 46   ; 0            ; |RA01                                                                                                                   ; RA01                ; work         ;
+; |RA01                                     ; 808 (2)             ; 182 (0)                   ; 0                 ; 0          ; 46   ; 0            ; |RA01                                                                                                                   ; RA01                ; work         ;
 ;    |DisplayHMS:comb_8|                    ; 216 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA01|DisplayHMS:comb_8                                                                                                 ; DisplayHMS          ; work         ;
 ;       |SSeg:ss0|                          ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA01|DisplayHMS:comb_8|SSeg:ss0                                                                                        ; SSeg                ; work         ;
 ;       |SSeg:ss1|                          ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA01|DisplayHMS:comb_8|SSeg:ss1                                                                                        ; SSeg                ; work         ;
@@ -281,13 +281,13 @@ https://fpgasoftware.intel.com/eula.
 ;          |lpm_divide_62m:auto_generated|  ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA01|DisplayHMS:comb_8|lpm_divide:Mod2|lpm_divide_62m:auto_generated                                                   ; lpm_divide_62m      ; work         ;
 ;             |sign_div_unsign_9kh:divider| ; 31 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA01|DisplayHMS:comb_8|lpm_divide:Mod2|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider                       ; sign_div_unsign_9kh ; work         ;
 ;                |alt_u_div_ose:divider|    ; 31 (31)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA01|DisplayHMS:comb_8|lpm_divide:Mod2|lpm_divide_62m:auto_generated|sign_div_unsign_9kh:divider|alt_u_div_ose:divider ; alt_u_div_ose       ; work         ;
-;    |Flash:comb_9|                         ; 343 (15)            ; 38 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |RA01|Flash:comb_9                                                                                                      ; Flash               ; work         ;
+;    |Flash:comb_9|                         ; 386 (17)            ; 38 (11)                   ; 0                 ; 0          ; 0    ; 0            ; |RA01|Flash:comb_9                                                                                                      ; Flash               ; work         ;
 ;       |Counter:editpress|                 ; 28 (28)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |RA01|Flash:comb_9|Counter:editpress                                                                                    ; Counter             ; work         ;
 ;       |RisingEdgeDetector:editclick|      ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RA01|Flash:comb_9|RisingEdgeDetector:editclick                                                                         ; RisingEdgeDetector  ; work         ;
-;       |lpm_divide:Div0|                   ; 298 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA01|Flash:comb_9|lpm_divide:Div0                                                                                      ; lpm_divide          ; work         ;
-;          |lpm_divide_8dm:auto_generated|  ; 298 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA01|Flash:comb_9|lpm_divide:Div0|lpm_divide_8dm:auto_generated                                                        ; lpm_divide_8dm      ; work         ;
-;             |sign_div_unsign_enh:divider| ; 298 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA01|Flash:comb_9|lpm_divide:Div0|lpm_divide_8dm:auto_generated|sign_div_unsign_enh:divider                            ; sign_div_unsign_enh ; work         ;
-;                |alt_u_div_23f:divider|    ; 298 (298)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA01|Flash:comb_9|lpm_divide:Div0|lpm_divide_8dm:auto_generated|sign_div_unsign_enh:divider|alt_u_div_23f:divider      ; alt_u_div_23f       ; work         ;
+;       |lpm_divide:Div0|                   ; 339 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA01|Flash:comb_9|lpm_divide:Div0                                                                                      ; lpm_divide          ; work         ;
+;          |lpm_divide_8dm:auto_generated|  ; 339 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA01|Flash:comb_9|lpm_divide:Div0|lpm_divide_8dm:auto_generated                                                        ; lpm_divide_8dm      ; work         ;
+;             |sign_div_unsign_enh:divider| ; 339 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA01|Flash:comb_9|lpm_divide:Div0|lpm_divide_8dm:auto_generated|sign_div_unsign_enh:divider                            ; sign_div_unsign_enh ; work         ;
+;                |alt_u_div_23f:divider|    ; 339 (339)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA01|Flash:comb_9|lpm_divide:Div0|lpm_divide_8dm:auto_generated|sign_div_unsign_enh:divider|alt_u_div_23f:divider      ; alt_u_div_23f       ; work         ;
 ;    |PressHold:mi|                         ; 69 (14)             ; 50 (2)                    ; 0                 ; 0          ; 0    ; 0            ; |RA01|PressHold:mi                                                                                                      ; PressHold           ; work         ;
 ;       |Counter:divider1|                  ; 26 (26)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |RA01|PressHold:mi|Counter:divider1                                                                                     ; Counter             ; work         ;
 ;       |Counter:divider2|                  ; 29 (29)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |RA01|PressHold:mi|Counter:divider2                                                                                     ; Counter             ; work         ;
@@ -348,14 +348,14 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |RA01|PressHold:mi|Counter:divider1|cnt[10] ;
-; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |RA01|PressHold:mi|Counter:divider2|cnt[5]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |RA01|PressHold:mi|Counter:divider1|cnt[11] ;
+; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |RA01|PressHold:mi|Counter:divider2|cnt[12] ;
 ; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |RA01|PressHold:pl|Counter:divider1|cnt[9]  ;
-; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |RA01|PressHold:pl|Counter:divider2|cnt[10] ;
+; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |RA01|PressHold:pl|Counter:divider2|cnt[9]  ;
 ; 4:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |RA01|Flash:comb_9|Counter:editpress|cnt[7] ;
-; 4:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |RA01|Time:t|Counter:divider|cnt[3]         ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |RA01|Time:t|Counter:divider|cnt[5]         ;
 ; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |RA01|Time:t|Counter:ch|cnt[1]              ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |RA01|Time:t|Counter:cm|cnt[3]              ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |RA01|Time:t|Counter:cm|cnt[2]              ;
 ; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |RA01|Time:t|Counter:cs|cnt[5]              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------+
 
@@ -689,31 +689,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     ENA SLD           ; 18                          ;
 ;     SCLR              ; 96                          ;
 ;     plain             ; 14                          ;
-; arriav_lcell_comb     ; 765                         ;
-;     arith             ; 383                         ;
-;         0 data inputs ; 38                          ;
-;         1 data inputs ; 170                         ;
+; arriav_lcell_comb     ; 808                         ;
+;     arith             ; 402                         ;
+;         0 data inputs ; 40                          ;
+;         1 data inputs ; 171                         ;
 ;         2 data inputs ; 20                          ;
-;         3 data inputs ; 92                          ;
-;         4 data inputs ; 48                          ;
+;         3 data inputs ; 101                         ;
+;         4 data inputs ; 55                          ;
 ;         5 data inputs ; 15                          ;
 ;     extend            ; 1                           ;
 ;         7 data inputs ; 1                           ;
-;     normal            ; 334                         ;
+;     normal            ; 358                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 146                         ;
-;         3 data inputs ; 33                          ;
-;         4 data inputs ; 60                          ;
-;         5 data inputs ; 55                          ;
-;         6 data inputs ; 38                          ;
+;         2 data inputs ; 162                         ;
+;         3 data inputs ; 36                          ;
+;         4 data inputs ; 66                          ;
+;         5 data inputs ; 53                          ;
+;         6 data inputs ; 39                          ;
 ;     shared            ; 47                          ;
 ;         0 data inputs ; 7                           ;
 ;         1 data inputs ; 40                          ;
 ; boundary_port         ; 46                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 22.70                       ;
-; Average LUT depth     ; 9.76                        ;
+; Max LUT depth         ; 26.30                       ;
+; Average LUT depth     ; 11.55                       ;
 +-----------------------+-----------------------------+
 
 
@@ -732,7 +732,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Thu May  2 15:04:39 2024
+    Info: Processing started: Thu May  2 20:01:28 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RA01 -c RA01
 Info (20032): Parallel compilation is enabled and will use up to 4 processors
 Info (12021): Found 3 design units, including 3 entities, in source file ra01.v
@@ -1203,14 +1203,14 @@ Warning (20013): Ignored 385 assignments for entity "DE1_SoC" -- entity does not
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to VGA_VS -entity DE1_SoC was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 815 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 858 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
     Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 769 logic cells
+    Info (21061): Implemented 812 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 400 warnings
     Info: Peak virtual memory: 4858 megabytes
-    Info: Processing ended: Thu May  2 15:04:47 2024
+    Info: Processing ended: Thu May  2 20:01:36 2024
     Info: Elapsed time: 00:00:08
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Total CPU time (on all processors): 00:00:11
 
 
