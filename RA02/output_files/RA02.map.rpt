@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RA02
-Fri May  3 18:36:17 2024
+Fri May  3 20:20:31 2024
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -15,17 +15,17 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
   9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Parameter Settings for User Entity Instance: PressHold:pl|Counter:divider1
- 11. Parameter Settings for User Entity Instance: PressHold:pl|Counter:divider2
- 12. Parameter Settings for User Entity Instance: PressHold:mi|Counter:divider1
- 13. Parameter Settings for User Entity Instance: PressHold:mi|Counter:divider2
- 14. Parameter Settings for User Entity Instance: Time:t|Counter:divider
- 15. Parameter Settings for User Entity Instance: Time:t|Counter:cs
- 16. Parameter Settings for User Entity Instance: Time:t|Counter:cm
- 17. Parameter Settings for User Entity Instance: Time:t|Counter:ch
- 18. Parameter Settings for User Entity Instance: Flash:fla_80
- 19. Parameter Settings for User Entity Instance: Flash:fla_80|Counter:editpress
- 20. Parameter Settings for User Entity Instance: Mode:keymod2|Counter:editpress
+ 10. Parameter Settings for User Entity Instance: ButtonControl:ButtCon|PressHold:pl|Counter:divider1
+ 11. Parameter Settings for User Entity Instance: ButtonControl:ButtCon|PressHold:pl|Counter:divider2
+ 12. Parameter Settings for User Entity Instance: ButtonControl:ButtCon|PressHold:mi|Counter:divider1
+ 13. Parameter Settings for User Entity Instance: ButtonControl:ButtCon|PressHold:mi|Counter:divider2
+ 14. Parameter Settings for User Entity Instance: ButtonControl:ButtCon|Mode:keymod2|Counter:editpress
+ 15. Parameter Settings for User Entity Instance: Time:t|Counter:divider
+ 16. Parameter Settings for User Entity Instance: Time:t|Counter:cs
+ 17. Parameter Settings for User Entity Instance: Time:t|Counter:cm
+ 18. Parameter Settings for User Entity Instance: Time:t|Counter:ch
+ 19. Parameter Settings for User Entity Instance: Flash:fla_80
+ 20. Parameter Settings for User Entity Instance: Flash:fla_80|Counter:editpress
  21. Parameter Settings for Inferred Entity Instance: DisplayHMS:disHMS|lpm_divide:Div2
  22. Parameter Settings for Inferred Entity Instance: DisplayHMS:disHMS|lpm_divide:Mod2
  23. Parameter Settings for Inferred Entity Instance: DisplayHMS:disHMS|lpm_divide:Div1
@@ -33,15 +33,15 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
  25. Parameter Settings for Inferred Entity Instance: DisplayHMS:disHMS|lpm_divide:Div0
  26. Parameter Settings for Inferred Entity Instance: DisplayHMS:disHMS|lpm_divide:Mod0
  27. Parameter Settings for Inferred Entity Instance: Flash:fla_80|lpm_divide:Div0
- 28. Port Connectivity Checks: "Mode:keymod2|Counter:editpress"
- 29. Port Connectivity Checks: "Flash:fla_80|Counter:editpress"
- 30. Port Connectivity Checks: "Flash:fla_80"
- 31. Port Connectivity Checks: "Time:t|Counter:ch"
- 32. Port Connectivity Checks: "Time:t|Counter:cm"
- 33. Port Connectivity Checks: "Time:t|Counter:cs"
- 34. Port Connectivity Checks: "Time:t|Counter:divider"
- 35. Port Connectivity Checks: "PressHold:pl|Counter:divider2"
- 36. Port Connectivity Checks: "PressHold:pl|Counter:divider1"
+ 28. Port Connectivity Checks: "Flash:fla_80|Counter:editpress"
+ 29. Port Connectivity Checks: "Flash:fla_80"
+ 30. Port Connectivity Checks: "Time:t|Counter:ch"
+ 31. Port Connectivity Checks: "Time:t|Counter:cm"
+ 32. Port Connectivity Checks: "Time:t|Counter:cs"
+ 33. Port Connectivity Checks: "Time:t|Counter:divider"
+ 34. Port Connectivity Checks: "ButtonControl:ButtCon|Mode:keymod2|Counter:editpress"
+ 35. Port Connectivity Checks: "ButtonControl:ButtCon|PressHold:pl|Counter:divider2"
+ 36. Port Connectivity Checks: "ButtonControl:ButtCon|PressHold:pl|Counter:divider1"
  37. Post-Synthesis Netlist Statistics for Top Partition
  38. Elapsed Time Per Partition
  39. Analysis & Synthesis Messages
@@ -71,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri May  3 18:36:17 2024          ;
+; Analysis & Synthesis Status     ; Successful - Fri May  3 20:20:30 2024          ;
 ; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                   ; RA02                                           ;
 ; Top-level Entity Name           ; RA02                                           ;
@@ -208,6 +208,8 @@ https://fpgasoftware.intel.com/eula.
 ; 7Seg.v                           ; yes             ; User Verilog HDL File        ; D:/Verilog/RA02/7Seg.v                                                        ;         ;
 ; ButtonControl.v                  ; yes             ; User Verilog HDL File        ; D:/Verilog/RA02/ButtonControl.v                                               ;         ;
 ; Time.v                           ; yes             ; User Verilog HDL File        ; D:/Verilog/RA02/Time.v                                                        ;         ;
+; DisplayHMS.v                     ; yes             ; User Verilog HDL File        ; D:/Verilog/RA02/DisplayHMS.v                                                  ;         ;
+; Flash.v                          ; yes             ; User Verilog HDL File        ; D:/Verilog/RA02/Flash.v                                                       ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
@@ -227,11 +229,11 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 407            ;
+; Estimate of Logic utilization (ALMs needed) ; 406            ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 743            ;
+; Combinational ALUT usage for logic          ; 742            ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 71             ;
+;     -- 6 input functions                    ; 70             ;
 ;     -- 5 input functions                    ; 50             ;
 ;     -- 4 input functions                    ; 94             ;
 ;     -- <=3 input functions                  ; 528            ;
@@ -244,8 +246,8 @@ https://fpgasoftware.intel.com/eula.
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
 ; Maximum fan-out                             ; 200            ;
-; Total fan-out                               ; 3078           ;
-; Average fan-out                             ; 2.97           ;
+; Total fan-out                               ; 3045           ;
+; Average fan-out                             ; 2.94           ;
 +---------------------------------------------+----------------+
 
 
@@ -254,10 +256,20 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                     ; Entity Name         ; Library Name ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |RA02                                     ; 743 (3)             ; 200 (0)                   ; 0                 ; 0          ; 47   ; 0            ; |RA02                                                                                                                   ; RA02                ; work         ;
-;    |DisplayHMS:disHMS|                    ; 246 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA02|DisplayHMS:disHMS                                                                                                 ; DisplayHMS          ; work         ;
+; |RA02                                     ; 742 (3)             ; 200 (0)                   ; 0                 ; 0          ; 47   ; 0            ; |RA02                                                                                                                   ; RA02                ; work         ;
+;    |ButtonControl:ButtCon|                ; 175 (0)             ; 130 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |RA02|ButtonControl:ButtCon                                                                                             ; ButtonControl       ; work         ;
+;       |Mode:keymod2|                      ; 39 (9)              ; 30 (3)                    ; 0                 ; 0          ; 0    ; 0            ; |RA02|ButtonControl:ButtCon|Mode:keymod2                                                                                ; Mode                ; work         ;
+;          |Counter:editpress|              ; 28 (28)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |RA02|ButtonControl:ButtCon|Mode:keymod2|Counter:editpress                                                              ; Counter             ; work         ;
+;          |RisingEdgeDetector:editclick|   ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RA02|ButtonControl:ButtCon|Mode:keymod2|RisingEdgeDetector:editclick                                                   ; RisingEdgeDetector  ; work         ;
+;       |PressHold:mi|                      ; 67 (12)             ; 50 (2)                    ; 0                 ; 0          ; 0    ; 0            ; |RA02|ButtonControl:ButtCon|PressHold:mi                                                                                ; PressHold           ; work         ;
+;          |Counter:divider1|               ; 26 (26)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |RA02|ButtonControl:ButtCon|PressHold:mi|Counter:divider1                                                               ; Counter             ; work         ;
+;          |Counter:divider2|               ; 29 (29)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |RA02|ButtonControl:ButtCon|PressHold:mi|Counter:divider2                                                               ; Counter             ; work         ;
+;       |PressHold:pl|                      ; 69 (13)             ; 50 (2)                    ; 0                 ; 0          ; 0    ; 0            ; |RA02|ButtonControl:ButtCon|PressHold:pl                                                                                ; PressHold           ; work         ;
+;          |Counter:divider1|               ; 26 (26)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |RA02|ButtonControl:ButtCon|PressHold:pl|Counter:divider1                                                               ; Counter             ; work         ;
+;          |Counter:divider2|               ; 30 (30)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |RA02|ButtonControl:ButtCon|PressHold:pl|Counter:divider2                                                               ; Counter             ; work         ;
+;    |DisplayHMS:disHMS|                    ; 247 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA02|DisplayHMS:disHMS                                                                                                 ; DisplayHMS          ; work         ;
 ;       |SSeg:ss0|                          ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA02|DisplayHMS:disHMS|SSeg:ss0                                                                                        ; SSeg                ; work         ;
-;       |SSeg:ss1|                          ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA02|DisplayHMS:disHMS|SSeg:ss1                                                                                        ; SSeg                ; work         ;
+;       |SSeg:ss1|                          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA02|DisplayHMS:disHMS|SSeg:ss1                                                                                        ; SSeg                ; work         ;
 ;       |SSeg:ss2|                          ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA02|DisplayHMS:disHMS|SSeg:ss2                                                                                        ; SSeg                ; work         ;
 ;       |SSeg:ss3|                          ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA02|DisplayHMS:disHMS|SSeg:ss3                                                                                        ; SSeg                ; work         ;
 ;       |SSeg:ss4|                          ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA02|DisplayHMS:disHMS|SSeg:ss4                                                                                        ; SSeg                ; work         ;
@@ -292,20 +304,11 @@ https://fpgasoftware.intel.com/eula.
 ;          |lpm_divide_7dm:auto_generated|  ; 216 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA02|Flash:fla_80|lpm_divide:Div0|lpm_divide_7dm:auto_generated                                                        ; lpm_divide_7dm      ; work         ;
 ;             |sign_div_unsign_dnh:divider| ; 216 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA02|Flash:fla_80|lpm_divide:Div0|lpm_divide_7dm:auto_generated|sign_div_unsign_dnh:divider                            ; sign_div_unsign_dnh ; work         ;
 ;                |alt_u_div_03f:divider|    ; 216 (216)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |RA02|Flash:fla_80|lpm_divide:Div0|lpm_divide_7dm:auto_generated|sign_div_unsign_dnh:divider|alt_u_div_03f:divider      ; alt_u_div_03f       ; work         ;
-;    |Mode:keymod2|                         ; 40 (10)             ; 30 (3)                    ; 0                 ; 0          ; 0    ; 0            ; |RA02|Mode:keymod2                                                                                                      ; Mode                ; work         ;
-;       |Counter:editpress|                 ; 28 (28)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |RA02|Mode:keymod2|Counter:editpress                                                                                    ; Counter             ; work         ;
-;       |RisingEdgeDetector:editclick|      ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |RA02|Mode:keymod2|RisingEdgeDetector:editclick                                                                         ; RisingEdgeDetector  ; work         ;
-;    |PressHold:mi|                         ; 67 (12)             ; 50 (2)                    ; 0                 ; 0          ; 0    ; 0            ; |RA02|PressHold:mi                                                                                                      ; PressHold           ; work         ;
-;       |Counter:divider1|                  ; 26 (26)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |RA02|PressHold:mi|Counter:divider1                                                                                     ; Counter             ; work         ;
-;       |Counter:divider2|                  ; 29 (29)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |RA02|PressHold:mi|Counter:divider2                                                                                     ; Counter             ; work         ;
-;    |PressHold:pl|                         ; 69 (13)             ; 50 (2)                    ; 0                 ; 0          ; 0    ; 0            ; |RA02|PressHold:pl                                                                                                      ; PressHold           ; work         ;
-;       |Counter:divider1|                  ; 26 (26)             ; 25 (25)                   ; 0                 ; 0          ; 0    ; 0            ; |RA02|PressHold:pl|Counter:divider1                                                                                     ; Counter             ; work         ;
-;       |Counter:divider2|                  ; 30 (30)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |RA02|PressHold:pl|Counter:divider2                                                                                     ; Counter             ; work         ;
-;    |Time:t|                               ; 71 (1)              ; 44 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |RA02|Time:t                                                                                                            ; Time                ; work         ;
+;    |Time:t|                               ; 70 (1)              ; 44 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |RA02|Time:t                                                                                                            ; Time                ; work         ;
 ;       |Counter:ch|                        ; 15 (15)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |RA02|Time:t|Counter:ch                                                                                                 ; Counter             ; work         ;
 ;       |Counter:cm|                        ; 11 (11)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |RA02|Time:t|Counter:cm                                                                                                 ; Counter             ; work         ;
 ;       |Counter:cs|                        ; 10 (10)             ; 6 (6)                     ; 0                 ; 0          ; 0    ; 0            ; |RA02|Time:t|Counter:cs                                                                                                 ; Counter             ; work         ;
-;       |Counter:divider|                   ; 34 (34)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |RA02|Time:t|Counter:divider                                                                                            ; Counter             ; work         ;
+;       |Counter:divider|                   ; 33 (33)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |RA02|Time:t|Counter:divider                                                                                            ; Counter             ; work         ;
 +-------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -320,73 +323,85 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Number of registers using Synchronous Load   ; 18    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 95    ;
+; Number of registers using Clock Enable       ; 69    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                   ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |RA02|PressHold:mi|Counter:divider1|cnt[9]   ;
-; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |RA02|PressHold:mi|Counter:divider2|cnt[4]   ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |RA02|PressHold:pl|Counter:divider1|cnt[8]   ;
-; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |RA02|PressHold:pl|Counter:divider2|cnt[18]  ;
-; 4:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |RA02|Mode:keymod2|Counter:editpress|cnt[15] ;
-; 4:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |RA02|Time:t|Counter:divider|cnt[2]          ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |RA02|Time:t|Counter:ch|cnt[5]               ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |RA02|Time:t|Counter:cm|cnt[0]               ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |RA02|Time:t|Counter:cs|cnt[0]               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |RA02|ButtonControl:ButtCon|PressHold:mi|Counter:divider1|cnt[23] ;
+; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |RA02|ButtonControl:ButtCon|PressHold:mi|Counter:divider2|cnt[5]  ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |RA02|ButtonControl:ButtCon|PressHold:pl|Counter:divider1|cnt[0]  ;
+; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |RA02|ButtonControl:ButtCon|PressHold:pl|Counter:divider2|cnt[4]  ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |RA02|Time:t|Counter:divider|cnt[5]                               ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |RA02|ButtonControl:ButtCon|Mode:keymod2|Counter:editpress|cnt[5] ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |RA02|Time:t|Counter:ch|cnt[3]                                    ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |RA02|Time:t|Counter:cm|cnt[4]                                    ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |RA02|Time:t|Counter:cs|cnt[3]                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: PressHold:pl|Counter:divider1 ;
-+----------------+----------+------------------------------------------------+
-; Parameter Name ; Value    ; Type                                           ;
-+----------------+----------+------------------------------------------------+
-; MAX            ; 24999999 ; Signed Integer                                 ;
-; WIDTH          ; 25       ; Signed Integer                                 ;
-; UP             ; 1        ; Unsigned Binary                                ;
-+----------------+----------+------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ButtonControl:ButtCon|PressHold:pl|Counter:divider1 ;
++----------------+----------+----------------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                                 ;
++----------------+----------+----------------------------------------------------------------------+
+; MAX            ; 24999999 ; Signed Integer                                                       ;
+; WIDTH          ; 25       ; Signed Integer                                                       ;
+; UP             ; 1        ; Unsigned Binary                                                      ;
++----------------+----------+----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: PressHold:pl|Counter:divider2 ;
-+----------------+---------+-------------------------------------------------+
-; Parameter Name ; Value   ; Type                                            ;
-+----------------+---------+-------------------------------------------------+
-; MAX            ; 4999999 ; Signed Integer                                  ;
-; WIDTH          ; 23      ; Signed Integer                                  ;
-; UP             ; 1       ; Unsigned Binary                                 ;
-+----------------+---------+-------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ButtonControl:ButtCon|PressHold:pl|Counter:divider2 ;
++----------------+---------+-----------------------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                                  ;
++----------------+---------+-----------------------------------------------------------------------+
+; MAX            ; 4999999 ; Signed Integer                                                        ;
+; WIDTH          ; 23      ; Signed Integer                                                        ;
+; UP             ; 1       ; Unsigned Binary                                                       ;
++----------------+---------+-----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: PressHold:mi|Counter:divider1 ;
-+----------------+----------+------------------------------------------------+
-; Parameter Name ; Value    ; Type                                           ;
-+----------------+----------+------------------------------------------------+
-; MAX            ; 24999999 ; Signed Integer                                 ;
-; WIDTH          ; 25       ; Signed Integer                                 ;
-; UP             ; 1        ; Unsigned Binary                                ;
-+----------------+----------+------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ButtonControl:ButtCon|PressHold:mi|Counter:divider1 ;
++----------------+----------+----------------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                                 ;
++----------------+----------+----------------------------------------------------------------------+
+; MAX            ; 24999999 ; Signed Integer                                                       ;
+; WIDTH          ; 25       ; Signed Integer                                                       ;
+; UP             ; 1        ; Unsigned Binary                                                      ;
++----------------+----------+----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: PressHold:mi|Counter:divider2 ;
-+----------------+---------+-------------------------------------------------+
-; Parameter Name ; Value   ; Type                                            ;
-+----------------+---------+-------------------------------------------------+
-; MAX            ; 4999999 ; Signed Integer                                  ;
-; WIDTH          ; 23      ; Signed Integer                                  ;
-; UP             ; 1       ; Unsigned Binary                                 ;
-+----------------+---------+-------------------------------------------------+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ButtonControl:ButtCon|PressHold:mi|Counter:divider2 ;
++----------------+---------+-----------------------------------------------------------------------+
+; Parameter Name ; Value   ; Type                                                                  ;
++----------------+---------+-----------------------------------------------------------------------+
+; MAX            ; 4999999 ; Signed Integer                                                        ;
+; WIDTH          ; 23      ; Signed Integer                                                        ;
+; UP             ; 1       ; Unsigned Binary                                                       ;
++----------------+---------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ButtonControl:ButtCon|Mode:keymod2|Counter:editpress ;
++----------------+----------+-----------------------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                                  ;
++----------------+----------+-----------------------------------------------------------------------+
+; MAX            ; 49999999 ; Signed Integer                                                        ;
+; WIDTH          ; 26       ; Signed Integer                                                        ;
+; UP             ; 1        ; Unsigned Binary                                                       ;
++----------------+----------+-----------------------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -444,7 +459,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Parameter Name ; Value ; Type                             ;
 +----------------+-------+----------------------------------+
 ; FRE            ; 2     ; Signed Integer                   ;
-; PER            ; 80    ; Signed Integer                   ;
+; DC             ; 80    ; Signed Integer                   ;
 +----------------+-------+----------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -456,18 +471,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+----------+-------------------------------------------------+
 ; MAX            ; 24999999 ; Signed Integer                                  ;
 ; WIDTH          ; 25       ; Signed Integer                                  ;
-; UP             ; 1        ; Unsigned Binary                                 ;
-+----------------+----------+-------------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+-----------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Mode:keymod2|Counter:editpress ;
-+----------------+----------+-------------------------------------------------+
-; Parameter Name ; Value    ; Type                                            ;
-+----------------+----------+-------------------------------------------------+
-; MAX            ; 49999999 ; Signed Integer                                  ;
-; WIDTH          ; 26       ; Signed Integer                                  ;
 ; UP             ; 1        ; Unsigned Binary                                 ;
 +----------------+----------+-------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
@@ -635,16 +638,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +------------------------------------------------------------+
-; Port Connectivity Checks: "Mode:keymod2|Counter:editpress" ;
-+-------+-------+----------+---------------------------------+
-; Port  ; Type  ; Severity ; Details                         ;
-+-------+-------+----------+---------------------------------+
-; plus  ; Input ; Info     ; Stuck at GND                    ;
-; minus ; Input ; Info     ; Stuck at GND                    ;
-+-------+-------+----------+---------------------------------+
-
-
-+------------------------------------------------------------+
 ; Port Connectivity Checks: "Flash:fla_80|Counter:editpress" ;
 +-------+-------+----------+---------------------------------+
 ; Port  ; Type  ; Severity ; Details                         ;
@@ -692,32 +685,43 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +----------------------------------------------------+
 ; Port Connectivity Checks: "Time:t|Counter:divider" ;
-+-------+-------+----------+-------------------------+
-; Port  ; Type  ; Severity ; Details                 ;
-+-------+-------+----------+-------------------------+
-; plus  ; Input ; Info     ; Stuck at GND            ;
-; minus ; Input ; Info     ; Stuck at GND            ;
-+-------+-------+----------+-------------------------+
++--------+-------+----------+------------------------+
+; Port   ; Type  ; Severity ; Details                ;
++--------+-------+----------+------------------------+
+; enable ; Input ; Info     ; Stuck at VCC           ;
+; plus   ; Input ; Info     ; Stuck at GND           ;
+; minus  ; Input ; Info     ; Stuck at GND           ;
++--------+-------+----------+------------------------+
 
 
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "PressHold:pl|Counter:divider2" ;
-+-------+-------+----------+--------------------------------+
-; Port  ; Type  ; Severity ; Details                        ;
-+-------+-------+----------+--------------------------------+
-; plus  ; Input ; Info     ; Stuck at GND                   ;
-; minus ; Input ; Info     ; Stuck at GND                   ;
-+-------+-------+----------+--------------------------------+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ButtonControl:ButtCon|Mode:keymod2|Counter:editpress" ;
++-------+-------+----------+-------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                               ;
++-------+-------+----------+-------------------------------------------------------+
+; plus  ; Input ; Info     ; Stuck at GND                                          ;
+; minus ; Input ; Info     ; Stuck at GND                                          ;
++-------+-------+----------+-------------------------------------------------------+
 
 
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "PressHold:pl|Counter:divider1" ;
-+-------+-------+----------+--------------------------------+
-; Port  ; Type  ; Severity ; Details                        ;
-+-------+-------+----------+--------------------------------+
-; plus  ; Input ; Info     ; Stuck at GND                   ;
-; minus ; Input ; Info     ; Stuck at GND                   ;
-+-------+-------+----------+--------------------------------+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ButtonControl:ButtCon|PressHold:pl|Counter:divider2" ;
++-------+-------+----------+------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                              ;
++-------+-------+----------+------------------------------------------------------+
+; plus  ; Input ; Info     ; Stuck at GND                                         ;
+; minus ; Input ; Info     ; Stuck at GND                                         ;
++-------+-------+----------+------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ButtonControl:ButtCon|PressHold:pl|Counter:divider1" ;
++-------+-------+----------+------------------------------------------------------+
+; Port  ; Type  ; Severity ; Details                                              ;
++-------+-------+----------+------------------------------------------------------+
+; plus  ; Input ; Info     ; Stuck at GND                                         ;
+; minus ; Input ; Info     ; Stuck at GND                                         ;
++-------+-------+----------+------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -726,11 +730,11 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; arriav_ff             ; 200                         ;
-;     ENA SCLR          ; 77                          ;
+;     ENA SCLR          ; 51                          ;
 ;     ENA SLD           ; 18                          ;
-;     SCLR              ; 96                          ;
+;     SCLR              ; 122                         ;
 ;     plain             ; 9                           ;
-; arriav_lcell_comb     ; 743                         ;
+; arriav_lcell_comb     ; 742                         ;
 ;     arith             ; 370                         ;
 ;         0 data inputs ; 34                          ;
 ;         1 data inputs ; 193                         ;
@@ -738,14 +742,14 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         3 data inputs ; 74                          ;
 ;         4 data inputs ; 34                          ;
 ;         5 data inputs ; 15                          ;
-;     normal            ; 326                         ;
+;     normal            ; 325                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 120                         ;
-;         3 data inputs ; 38                          ;
+;         2 data inputs ; 121                         ;
+;         3 data inputs ; 37                          ;
 ;         4 data inputs ; 60                          ;
 ;         5 data inputs ; 35                          ;
-;         6 data inputs ; 71                          ;
+;         6 data inputs ; 70                          ;
 ;     shared            ; 47                          ;
 ;         0 data inputs ; 7                           ;
 ;         1 data inputs ; 40                          ;
@@ -771,61 +775,65 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Fri May  3 18:36:09 2024
+    Info: Processing started: Fri May  3 20:20:22 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RA02 -c RA02
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Info (12021): Found 4 design units, including 4 entities, in source file ra02.v
+Info (12021): Found 1 design units, including 1 entities, in source file ra02.v
     Info (12023): Found entity 1: RA02 File: D:/Verilog/RA02/RA02.v Line: 2
-    Info (12023): Found entity 2: DisplayHMS File: D:/Verilog/RA02/RA02.v Line: 37
-    Info (12023): Found entity 3: Flash File: D:/Verilog/RA02/RA02.v Line: 66
-    Info (12023): Found entity 4: Mode File: D:/Verilog/RA02/RA02.v Line: 90
 Info (12021): Found 1 design units, including 1 entities, in source file 7seg.v
     Info (12023): Found entity 1: SSeg File: D:/Verilog/RA02/7Seg.v Line: 2
-Info (12021): Found 2 design units, including 2 entities, in source file buttoncontrol.v
+Info (12021): Found 4 design units, including 4 entities, in source file buttoncontrol.v
     Info (12023): Found entity 1: RisingEdgeDetector File: D:/Verilog/RA02/ButtonControl.v Line: 1
     Info (12023): Found entity 2: PressHold File: D:/Verilog/RA02/ButtonControl.v Line: 21
+    Info (12023): Found entity 3: Mode File: D:/Verilog/RA02/ButtonControl.v Line: 63
+    Info (12023): Found entity 4: ButtonControl File: D:/Verilog/RA02/ButtonControl.v Line: 104
 Info (12021): Found 2 design units, including 2 entities, in source file time.v
     Info (12023): Found entity 1: Time File: D:/Verilog/RA02/Time.v Line: 2
     Info (12023): Found entity 2: Counter File: D:/Verilog/RA02/Time.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file displayhms.v
+    Info (12023): Found entity 1: DisplayHMS File: D:/Verilog/RA02/DisplayHMS.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file flash.v
+    Info (12023): Found entity 1: Flash File: D:/Verilog/RA02/Flash.v Line: 3
 Info (12127): Elaborating entity "RA02" for the top level hierarchy
-Info (12128): Elaborating entity "PressHold" for hierarchy "PressHold:pl" File: D:/Verilog/RA02/RA02.v Line: 14
-Info (12128): Elaborating entity "Counter" for hierarchy "PressHold:pl|Counter:divider1" File: D:/Verilog/RA02/ButtonControl.v Line: 35
+Info (12128): Elaborating entity "ButtonControl" for hierarchy "ButtonControl:ButtCon" File: D:/Verilog/RA02/RA02.v Line: 18
+Info (12128): Elaborating entity "PressHold" for hierarchy "ButtonControl:ButtCon|PressHold:pl" File: D:/Verilog/RA02/ButtonControl.v Line: 109
+Info (12128): Elaborating entity "Counter" for hierarchy "ButtonControl:ButtCon|PressHold:pl|Counter:divider1" File: D:/Verilog/RA02/ButtonControl.v Line: 35
 Warning (10230): Verilog HDL assignment warning at Time.v(48): truncated value with size 32 to match size of target (25) File: D:/Verilog/RA02/Time.v Line: 48
-Info (12128): Elaborating entity "Counter" for hierarchy "PressHold:pl|Counter:divider2" File: D:/Verilog/RA02/ButtonControl.v Line: 39
+Info (12128): Elaborating entity "Counter" for hierarchy "ButtonControl:ButtCon|PressHold:pl|Counter:divider2" File: D:/Verilog/RA02/ButtonControl.v Line: 39
 Warning (10230): Verilog HDL assignment warning at Time.v(48): truncated value with size 32 to match size of target (23) File: D:/Verilog/RA02/Time.v Line: 48
-Info (12128): Elaborating entity "Time" for hierarchy "Time:t" File: D:/Verilog/RA02/RA02.v Line: 18
-Info (12128): Elaborating entity "Counter" for hierarchy "Time:t|Counter:divider" File: D:/Verilog/RA02/Time.v Line: 11
+Info (12128): Elaborating entity "Mode" for hierarchy "ButtonControl:ButtCon|Mode:keymod2" File: D:/Verilog/RA02/ButtonControl.v Line: 111
+Warning (10036): Verilog HDL or VHDL warning at ButtonControl.v(80): object "ms" assigned a value but never read File: D:/Verilog/RA02/ButtonControl.v Line: 80
+Warning (10230): Verilog HDL assignment warning at ButtonControl.v(81): truncated value with size 32 to match size of target (10) File: D:/Verilog/RA02/ButtonControl.v Line: 81
+Warning (10230): Verilog HDL assignment warning at ButtonControl.v(101): truncated value with size 32 to match size of target (2) File: D:/Verilog/RA02/ButtonControl.v Line: 101
+Info (12128): Elaborating entity "Counter" for hierarchy "ButtonControl:ButtCon|Mode:keymod2|Counter:editpress" File: D:/Verilog/RA02/ButtonControl.v Line: 76
 Warning (10230): Verilog HDL assignment warning at Time.v(48): truncated value with size 32 to match size of target (26) File: D:/Verilog/RA02/Time.v Line: 48
+Info (12128): Elaborating entity "RisingEdgeDetector" for hierarchy "ButtonControl:ButtCon|Mode:keymod2|RisingEdgeDetector:editclick" File: D:/Verilog/RA02/ButtonControl.v Line: 78
+Info (12128): Elaborating entity "Time" for hierarchy "Time:t" File: D:/Verilog/RA02/RA02.v Line: 22
 Info (12128): Elaborating entity "Counter" for hierarchy "Time:t|Counter:cs" File: D:/Verilog/RA02/Time.v Line: 14
 Warning (10230): Verilog HDL assignment warning at Time.v(48): truncated value with size 32 to match size of target (6) File: D:/Verilog/RA02/Time.v Line: 48
 Info (12128): Elaborating entity "Counter" for hierarchy "Time:t|Counter:ch" File: D:/Verilog/RA02/Time.v Line: 20
 Warning (10230): Verilog HDL assignment warning at Time.v(48): truncated value with size 32 to match size of target (6) File: D:/Verilog/RA02/Time.v Line: 48
 Info (12128): Elaborating entity "Flash" for hierarchy "Flash:fla_80" File: D:/Verilog/RA02/RA02.v Line: 26
-Warning (10230): Verilog HDL assignment warning at RA02.v(80): truncated value with size 32 to match size of target (10) File: D:/Verilog/RA02/RA02.v Line: 80
-Info (12128): Elaborating entity "Mode" for hierarchy "Mode:keymod2" File: D:/Verilog/RA02/RA02.v Line: 28
-Warning (10036): Verilog HDL or VHDL warning at RA02.v(107): object "ms" assigned a value but never read File: D:/Verilog/RA02/RA02.v Line: 107
-Warning (10230): Verilog HDL assignment warning at RA02.v(108): truncated value with size 32 to match size of target (10) File: D:/Verilog/RA02/RA02.v Line: 108
-Warning (10230): Verilog HDL assignment warning at RA02.v(128): truncated value with size 32 to match size of target (2) File: D:/Verilog/RA02/RA02.v Line: 128
-Info (12128): Elaborating entity "RisingEdgeDetector" for hierarchy "Mode:keymod2|RisingEdgeDetector:editclick" File: D:/Verilog/RA02/RA02.v Line: 105
-Info (12128): Elaborating entity "DisplayHMS" for hierarchy "DisplayHMS:disHMS" File: D:/Verilog/RA02/RA02.v Line: 31
-Warning (10230): Verilog HDL assignment warning at RA02.v(50): truncated value with size 6 to match size of target (4) File: D:/Verilog/RA02/RA02.v Line: 50
-Warning (10230): Verilog HDL assignment warning at RA02.v(51): truncated value with size 6 to match size of target (4) File: D:/Verilog/RA02/RA02.v Line: 51
-Warning (10230): Verilog HDL assignment warning at RA02.v(52): truncated value with size 6 to match size of target (4) File: D:/Verilog/RA02/RA02.v Line: 52
-Warning (10230): Verilog HDL assignment warning at RA02.v(53): truncated value with size 6 to match size of target (4) File: D:/Verilog/RA02/RA02.v Line: 53
-Warning (10230): Verilog HDL assignment warning at RA02.v(54): truncated value with size 6 to match size of target (4) File: D:/Verilog/RA02/RA02.v Line: 54
-Warning (10230): Verilog HDL assignment warning at RA02.v(55): truncated value with size 6 to match size of target (4) File: D:/Verilog/RA02/RA02.v Line: 55
-Info (12128): Elaborating entity "SSeg" for hierarchy "DisplayHMS:disHMS|SSeg:ss0" File: D:/Verilog/RA02/RA02.v Line: 57
+Warning (10230): Verilog HDL assignment warning at Flash.v(17): truncated value with size 32 to match size of target (10) File: D:/Verilog/RA02/Flash.v Line: 17
+Info (12128): Elaborating entity "DisplayHMS" for hierarchy "DisplayHMS:disHMS" File: D:/Verilog/RA02/RA02.v Line: 30
+Warning (10230): Verilog HDL assignment warning at DisplayHMS.v(15): truncated value with size 6 to match size of target (4) File: D:/Verilog/RA02/DisplayHMS.v Line: 15
+Warning (10230): Verilog HDL assignment warning at DisplayHMS.v(16): truncated value with size 6 to match size of target (4) File: D:/Verilog/RA02/DisplayHMS.v Line: 16
+Warning (10230): Verilog HDL assignment warning at DisplayHMS.v(17): truncated value with size 6 to match size of target (4) File: D:/Verilog/RA02/DisplayHMS.v Line: 17
+Warning (10230): Verilog HDL assignment warning at DisplayHMS.v(18): truncated value with size 6 to match size of target (4) File: D:/Verilog/RA02/DisplayHMS.v Line: 18
+Warning (10230): Verilog HDL assignment warning at DisplayHMS.v(19): truncated value with size 6 to match size of target (4) File: D:/Verilog/RA02/DisplayHMS.v Line: 19
+Warning (10230): Verilog HDL assignment warning at DisplayHMS.v(20): truncated value with size 6 to match size of target (4) File: D:/Verilog/RA02/DisplayHMS.v Line: 20
+Info (12128): Elaborating entity "SSeg" for hierarchy "DisplayHMS:disHMS|SSeg:ss0" File: D:/Verilog/RA02/DisplayHMS.v Line: 22
 Info (278001): Inferred 7 megafunctions from design logic
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayHMS:disHMS|Div2" File: D:/Verilog/RA02/RA02.v Line: 55
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayHMS:disHMS|Mod2" File: D:/Verilog/RA02/RA02.v Line: 54
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayHMS:disHMS|Div1" File: D:/Verilog/RA02/RA02.v Line: 53
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayHMS:disHMS|Mod1" File: D:/Verilog/RA02/RA02.v Line: 52
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayHMS:disHMS|Div0" File: D:/Verilog/RA02/RA02.v Line: 51
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayHMS:disHMS|Mod0" File: D:/Verilog/RA02/RA02.v Line: 50
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Flash:fla_80|Div0" File: D:/Verilog/RA02/RA02.v Line: 80
-Info (12130): Elaborated megafunction instantiation "DisplayHMS:disHMS|lpm_divide:Div2" File: D:/Verilog/RA02/RA02.v Line: 55
-Info (12133): Instantiated megafunction "DisplayHMS:disHMS|lpm_divide:Div2" with the following parameter: File: D:/Verilog/RA02/RA02.v Line: 55
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayHMS:disHMS|Div2" File: D:/Verilog/RA02/DisplayHMS.v Line: 20
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayHMS:disHMS|Mod2" File: D:/Verilog/RA02/DisplayHMS.v Line: 19
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayHMS:disHMS|Div1" File: D:/Verilog/RA02/DisplayHMS.v Line: 18
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayHMS:disHMS|Mod1" File: D:/Verilog/RA02/DisplayHMS.v Line: 17
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayHMS:disHMS|Div0" File: D:/Verilog/RA02/DisplayHMS.v Line: 16
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayHMS:disHMS|Mod0" File: D:/Verilog/RA02/DisplayHMS.v Line: 15
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Flash:fla_80|Div0" File: D:/Verilog/RA02/Flash.v Line: 17
+Info (12130): Elaborated megafunction instantiation "DisplayHMS:disHMS|lpm_divide:Div2" File: D:/Verilog/RA02/DisplayHMS.v Line: 20
+Info (12133): Instantiated megafunction "DisplayHMS:disHMS|lpm_divide:Div2" with the following parameter: File: D:/Verilog/RA02/DisplayHMS.v Line: 20
     Info (12134): Parameter "LPM_WIDTHN" = "6"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -836,16 +844,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_9kh File: D:/Verilog/RA02/db/sign_div_unsign_9kh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_ose.tdf
     Info (12023): Found entity 1: alt_u_div_ose File: D:/Verilog/RA02/db/alt_u_div_ose.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "DisplayHMS:disHMS|lpm_divide:Mod2" File: D:/Verilog/RA02/RA02.v Line: 54
-Info (12133): Instantiated megafunction "DisplayHMS:disHMS|lpm_divide:Mod2" with the following parameter: File: D:/Verilog/RA02/RA02.v Line: 54
+Info (12130): Elaborated megafunction instantiation "DisplayHMS:disHMS|lpm_divide:Mod2" File: D:/Verilog/RA02/DisplayHMS.v Line: 19
+Info (12133): Instantiated megafunction "DisplayHMS:disHMS|lpm_divide:Mod2" with the following parameter: File: D:/Verilog/RA02/DisplayHMS.v Line: 19
     Info (12134): Parameter "LPM_WIDTHN" = "6"
     Info (12134): Parameter "LPM_WIDTHD" = "4"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_62m.tdf
     Info (12023): Found entity 1: lpm_divide_62m File: D:/Verilog/RA02/db/lpm_divide_62m.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "Flash:fla_80|lpm_divide:Div0" File: D:/Verilog/RA02/RA02.v Line: 80
-Info (12133): Instantiated megafunction "Flash:fla_80|lpm_divide:Div0" with the following parameter: File: D:/Verilog/RA02/RA02.v Line: 80
+Info (12130): Elaborated megafunction instantiation "Flash:fla_80|lpm_divide:Div0" File: D:/Verilog/RA02/Flash.v Line: 17
+Info (12133): Instantiated megafunction "Flash:fla_80|lpm_divide:Div0" with the following parameter: File: D:/Verilog/RA02/Flash.v Line: 17
     Info (12134): Parameter "LPM_WIDTHN" = "25"
     Info (12134): Parameter "LPM_WIDTHD" = "16"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
@@ -1247,14 +1255,14 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "KEY[3]" File: D:/Verilog/RA02/RA02.v Line: 4
-Info (21057): Implemented 790 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 789 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 42 output pins
-    Info (21061): Implemented 743 logic cells
+    Info (21061): Implemented 742 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 404 warnings
     Info: Peak virtual memory: 4877 megabytes
-    Info: Processing ended: Fri May  3 18:36:17 2024
-    Info: Elapsed time: 00:00:08
+    Info: Processing ended: Fri May  3 20:20:31 2024
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:10
 
 

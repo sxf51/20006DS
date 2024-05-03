@@ -7,11 +7,11 @@ output [5: 0] hours, mins, secs);
     wire [BW-1: 0] tick;
 	 
     Counter #(.MAX(N-1), .WIDTH(BW), .UP(1'b1))
-        divider(.clk(clk), .enable(enable || mode[1]),
-			.reset(reset || ((plus || minus) && !mode[1])), .plus(1'b0), .minus(1'b0), .cnt(tick));
+        divider(.clk(clk), .enable(1'b1),
+			.reset(reset || ((plus || minus) && (mode == 2'b01))), .plus(1'b0), .minus(1'b0), .cnt(tick));
     Counter #(.MAX(59), .WIDTH(6), .UP(1'b1))
-        cs(.clk(clk), .enable((enable || mode[1]) && tick == (N-1)),
-			.reset(1'b0), .plus(!mode[1] && plus), .minus(!mode[1] && minus), .cnt(secs));
+        cs(.clk(clk), .enable((enable || (mode != 2'b01)) && tick == (N-1)),
+			.reset(1'b0), .plus((mode == 2'b01) && plus), .minus((mode == 2'b01) && minus), .cnt(secs));
 	 Counter #(.MAX(59), .WIDTH(6), .UP(1'b1))
         cm(.clk(clk), .enable((enable || (mode == 2'b11)) && secs == 59 && tick == (N-1)),
 			.reset(1'b0), .plus((mode == 2'b10) && plus), .minus((mode == 2'b10) && minus), .cnt(mins));

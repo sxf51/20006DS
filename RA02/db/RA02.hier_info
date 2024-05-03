@@ -1,60 +1,68 @@
 |RA02
-CLOCK_50 => CLOCK_50.IN5
-KEY[0] => comb.IN0
-KEY[0] => comb.IN0
-KEY[0] => comb.IN0
-KEY[0] => comb.IN0
-KEY[1] => comb.IN1
-KEY[1] => comb.IN1
-KEY[1] => comb.IN1
-KEY[1] => comb.IN1
+CLOCK_50 => CLOCK_50.IN3
+KEY[0] => KEY[0].IN1
+KEY[1] => KEY[1].IN1
 KEY[2] => KEY[2].IN1
-KEY[3] => ~NO_FANOUT~
-HEX5[0] <= DisplayHMS:disHMS.hex5
-HEX5[1] <= DisplayHMS:disHMS.hex5
-HEX5[2] <= DisplayHMS:disHMS.hex5
-HEX5[3] <= DisplayHMS:disHMS.hex5
-HEX5[4] <= DisplayHMS:disHMS.hex5
-HEX5[5] <= DisplayHMS:disHMS.hex5
-HEX5[6] <= DisplayHMS:disHMS.hex5
-HEX4[0] <= DisplayHMS:disHMS.hex4
-HEX4[1] <= DisplayHMS:disHMS.hex4
-HEX4[2] <= DisplayHMS:disHMS.hex4
-HEX4[3] <= DisplayHMS:disHMS.hex4
-HEX4[4] <= DisplayHMS:disHMS.hex4
-HEX4[5] <= DisplayHMS:disHMS.hex4
-HEX4[6] <= DisplayHMS:disHMS.hex4
-HEX3[0] <= DisplayHMS:disHMS.hex3
-HEX3[1] <= DisplayHMS:disHMS.hex3
-HEX3[2] <= DisplayHMS:disHMS.hex3
-HEX3[3] <= DisplayHMS:disHMS.hex3
-HEX3[4] <= DisplayHMS:disHMS.hex3
-HEX3[5] <= DisplayHMS:disHMS.hex3
-HEX3[6] <= DisplayHMS:disHMS.hex3
-HEX2[0] <= DisplayHMS:disHMS.hex2
-HEX2[1] <= DisplayHMS:disHMS.hex2
-HEX2[2] <= DisplayHMS:disHMS.hex2
-HEX2[3] <= DisplayHMS:disHMS.hex2
-HEX2[4] <= DisplayHMS:disHMS.hex2
-HEX2[5] <= DisplayHMS:disHMS.hex2
-HEX2[6] <= DisplayHMS:disHMS.hex2
-HEX1[0] <= DisplayHMS:disHMS.hex1
-HEX1[1] <= DisplayHMS:disHMS.hex1
-HEX1[2] <= DisplayHMS:disHMS.hex1
-HEX1[3] <= DisplayHMS:disHMS.hex1
-HEX1[4] <= DisplayHMS:disHMS.hex1
-HEX1[5] <= DisplayHMS:disHMS.hex1
-HEX1[6] <= DisplayHMS:disHMS.hex1
-HEX0[0] <= DisplayHMS:disHMS.hex0
-HEX0[1] <= DisplayHMS:disHMS.hex0
-HEX0[2] <= DisplayHMS:disHMS.hex0
-HEX0[3] <= DisplayHMS:disHMS.hex0
-HEX0[4] <= DisplayHMS:disHMS.hex0
-HEX0[5] <= DisplayHMS:disHMS.hex0
-HEX0[6] <= DisplayHMS:disHMS.hex0
+KEY[3] => KEY[3].IN1
+HEX5[0] << DisplayHMS:disHMS.hex5
+HEX5[1] << DisplayHMS:disHMS.hex5
+HEX5[2] << DisplayHMS:disHMS.hex5
+HEX5[3] << DisplayHMS:disHMS.hex5
+HEX5[4] << DisplayHMS:disHMS.hex5
+HEX5[5] << DisplayHMS:disHMS.hex5
+HEX5[6] << DisplayHMS:disHMS.hex5
+HEX4[0] << DisplayHMS:disHMS.hex4
+HEX4[1] << DisplayHMS:disHMS.hex4
+HEX4[2] << DisplayHMS:disHMS.hex4
+HEX4[3] << DisplayHMS:disHMS.hex4
+HEX4[4] << DisplayHMS:disHMS.hex4
+HEX4[5] << DisplayHMS:disHMS.hex4
+HEX4[6] << DisplayHMS:disHMS.hex4
+HEX3[0] << DisplayHMS:disHMS.hex3
+HEX3[1] << DisplayHMS:disHMS.hex3
+HEX3[2] << DisplayHMS:disHMS.hex3
+HEX3[3] << DisplayHMS:disHMS.hex3
+HEX3[4] << DisplayHMS:disHMS.hex3
+HEX3[5] << DisplayHMS:disHMS.hex3
+HEX3[6] << DisplayHMS:disHMS.hex3
+HEX2[0] << DisplayHMS:disHMS.hex2
+HEX2[1] << DisplayHMS:disHMS.hex2
+HEX2[2] << DisplayHMS:disHMS.hex2
+HEX2[3] << DisplayHMS:disHMS.hex2
+HEX2[4] << DisplayHMS:disHMS.hex2
+HEX2[5] << DisplayHMS:disHMS.hex2
+HEX2[6] << DisplayHMS:disHMS.hex2
+HEX1[0] << DisplayHMS:disHMS.hex1
+HEX1[1] << DisplayHMS:disHMS.hex1
+HEX1[2] << DisplayHMS:disHMS.hex1
+HEX1[3] << DisplayHMS:disHMS.hex1
+HEX1[4] << DisplayHMS:disHMS.hex1
+HEX1[5] << DisplayHMS:disHMS.hex1
+HEX1[6] << DisplayHMS:disHMS.hex1
+HEX0[0] << DisplayHMS:disHMS.hex0
+HEX0[1] << DisplayHMS:disHMS.hex0
+HEX0[2] << DisplayHMS:disHMS.hex0
+HEX0[3] << DisplayHMS:disHMS.hex0
+HEX0[4] << DisplayHMS:disHMS.hex0
+HEX0[5] << DisplayHMS:disHMS.hex0
+HEX0[6] << DisplayHMS:disHMS.hex0
 
 
-|RA02|PressHold:pl
+|RA02|ButtonControl:ButtCon
+clk => clk.IN3
+key[0] => comb.IN0
+key[0] => comb.IN0
+key[1] => comb.IN1
+key[1] => comb.IN1
+key[2] => key[2].IN1
+key[3] => ~NO_FANOUT~
+mode[0] <= Mode:keymod2.mode
+mode[1] <= Mode:keymod2.mode
+plus <= PressHold:pl.out
+minus <= PressHold:mi.out
+
+
+|RA02|ButtonControl:ButtCon|PressHold:pl
 clk => clk.IN2
 in => Decoder0.IN0
 in => Mux1.IN2
@@ -65,7 +73,7 @@ in => Mux1.IN3
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RA02|PressHold:pl|Counter:divider1
+|RA02|ButtonControl:ButtCon|PressHold:pl|Counter:divider1
 clk => cnt[0]~reg0.CLK
 clk => cnt[1]~reg0.CLK
 clk => cnt[2]~reg0.CLK
@@ -149,7 +157,7 @@ cnt[23] <= cnt[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 cnt[24] <= cnt[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RA02|PressHold:pl|Counter:divider2
+|RA02|ButtonControl:ButtCon|PressHold:pl|Counter:divider2
 clk => cnt[0]~reg0.CLK
 clk => cnt[1]~reg0.CLK
 clk => cnt[2]~reg0.CLK
@@ -227,7 +235,7 @@ cnt[21] <= cnt[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 cnt[22] <= cnt[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RA02|PressHold:mi
+|RA02|ButtonControl:ButtCon|PressHold:mi
 clk => clk.IN2
 in => Decoder0.IN0
 in => Mux1.IN2
@@ -238,7 +246,7 @@ in => Mux1.IN3
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RA02|PressHold:mi|Counter:divider1
+|RA02|ButtonControl:ButtCon|PressHold:mi|Counter:divider1
 clk => cnt[0]~reg0.CLK
 clk => cnt[1]~reg0.CLK
 clk => cnt[2]~reg0.CLK
@@ -322,7 +330,7 @@ cnt[23] <= cnt[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 cnt[24] <= cnt[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|RA02|PressHold:mi|Counter:divider2
+|RA02|ButtonControl:ButtCon|PressHold:mi|Counter:divider2
 clk => cnt[0]~reg0.CLK
 clk => cnt[1]~reg0.CLK
 clk => cnt[2]~reg0.CLK
@@ -398,38 +406,143 @@ cnt[19] <= cnt[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 cnt[20] <= cnt[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 cnt[21] <= cnt[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 cnt[22] <= cnt[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RA02|ButtonControl:ButtCon|Mode:keymod2
+clk => clk.IN2
+key => Decoder0.IN0
+key => _.IN1
+key => Mux2.IN4
+mode[0] <= mode.DB_MAX_OUTPUT_PORT_TYPE
+mode[1] <= mode.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RA02|ButtonControl:ButtCon|Mode:keymod2|Counter:editpress
+clk => cnt[0]~reg0.CLK
+clk => cnt[1]~reg0.CLK
+clk => cnt[2]~reg0.CLK
+clk => cnt[3]~reg0.CLK
+clk => cnt[4]~reg0.CLK
+clk => cnt[5]~reg0.CLK
+clk => cnt[6]~reg0.CLK
+clk => cnt[7]~reg0.CLK
+clk => cnt[8]~reg0.CLK
+clk => cnt[9]~reg0.CLK
+clk => cnt[10]~reg0.CLK
+clk => cnt[11]~reg0.CLK
+clk => cnt[12]~reg0.CLK
+clk => cnt[13]~reg0.CLK
+clk => cnt[14]~reg0.CLK
+clk => cnt[15]~reg0.CLK
+clk => cnt[16]~reg0.CLK
+clk => cnt[17]~reg0.CLK
+clk => cnt[18]~reg0.CLK
+clk => cnt[19]~reg0.CLK
+clk => cnt[20]~reg0.CLK
+clk => cnt[21]~reg0.CLK
+clk => cnt[22]~reg0.CLK
+clk => cnt[23]~reg0.CLK
+clk => cnt[24]~reg0.CLK
+clk => cnt[25]~reg0.CLK
+enable => always0.IN0
+enable => Decoder0.IN0
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+plus => always0.IN1
+plus => Decoder2.IN0
+minus => always0.IN1
+minus => Decoder1.IN0
+cnt[0] <= cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[1] <= cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[2] <= cnt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[3] <= cnt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[4] <= cnt[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[5] <= cnt[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[6] <= cnt[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[7] <= cnt[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[8] <= cnt[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[9] <= cnt[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[10] <= cnt[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[11] <= cnt[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[12] <= cnt[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[13] <= cnt[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[14] <= cnt[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[15] <= cnt[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[16] <= cnt[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[17] <= cnt[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[18] <= cnt[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[19] <= cnt[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[20] <= cnt[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[21] <= cnt[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[22] <= cnt[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[23] <= cnt[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[24] <= cnt[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[25] <= cnt[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RA02|ButtonControl:ButtCon|Mode:keymod2|RisingEdgeDetector:editclick
+clk => prev.CLK
+in => prev.DATAIN
+in => out.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |RA02|Time:t
 clk => clk.IN4
-enable => comb.IN0
-enable => comb.IN0
+enable => comb.IN1
 enable => comb.IN1
 enable => comb.IN1
 reset => comb.IN1
 plus => comb.IN0
-plus => comb.IN0
 plus => comb.IN1
 plus => comb.IN1
+plus => comb.IN1
 minus => comb.IN1
-minus => comb.IN0
 minus => comb.IN1
 minus => comb.IN1
-mode[0] => Equal1.IN1
-mode[0] => Equal4.IN1
+minus => comb.IN1
+mode[0] => Equal0.IN0
+mode[0] => Equal1.IN0
+mode[0] => Equal3.IN0
+mode[0] => Equal4.IN0
 mode[0] => Equal5.IN1
+mode[0] => Equal8.IN1
 mode[0] => Equal9.IN1
-mode[0] => Equal10.IN1
-mode[1] => comb.IN1
-mode[1] => comb.IN1
-mode[1] => comb.IN1
-mode[1] => comb.IN1
-mode[1] => comb.IN1
-mode[1] => Equal1.IN0
-mode[1] => Equal4.IN0
+mode[0] => Equal13.IN1
+mode[0] => Equal14.IN1
+mode[1] => Equal0.IN1
+mode[1] => Equal1.IN1
+mode[1] => Equal3.IN1
+mode[1] => Equal4.IN1
 mode[1] => Equal5.IN0
+mode[1] => Equal8.IN0
 mode[1] => Equal9.IN0
-mode[1] => Equal10.IN0
+mode[1] => Equal13.IN0
+mode[1] => Equal14.IN0
 hours[0] <= Counter:ch.cnt
 hours[1] <= Counter:ch.cnt
 hours[2] <= Counter:ch.cnt
@@ -707,109 +820,6 @@ cnt[21] <= cnt[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 cnt[22] <= cnt[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 cnt[23] <= cnt[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 cnt[24] <= cnt[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|RA02|Mode:keymod2
-clk => clk.IN2
-key => Decoder0.IN0
-key => _.IN1
-key => Mux2.IN4
-mode[0] <= mode.DB_MAX_OUTPUT_PORT_TYPE
-mode[1] <= mode.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|RA02|Mode:keymod2|Counter:editpress
-clk => cnt[0]~reg0.CLK
-clk => cnt[1]~reg0.CLK
-clk => cnt[2]~reg0.CLK
-clk => cnt[3]~reg0.CLK
-clk => cnt[4]~reg0.CLK
-clk => cnt[5]~reg0.CLK
-clk => cnt[6]~reg0.CLK
-clk => cnt[7]~reg0.CLK
-clk => cnt[8]~reg0.CLK
-clk => cnt[9]~reg0.CLK
-clk => cnt[10]~reg0.CLK
-clk => cnt[11]~reg0.CLK
-clk => cnt[12]~reg0.CLK
-clk => cnt[13]~reg0.CLK
-clk => cnt[14]~reg0.CLK
-clk => cnt[15]~reg0.CLK
-clk => cnt[16]~reg0.CLK
-clk => cnt[17]~reg0.CLK
-clk => cnt[18]~reg0.CLK
-clk => cnt[19]~reg0.CLK
-clk => cnt[20]~reg0.CLK
-clk => cnt[21]~reg0.CLK
-clk => cnt[22]~reg0.CLK
-clk => cnt[23]~reg0.CLK
-clk => cnt[24]~reg0.CLK
-clk => cnt[25]~reg0.CLK
-enable => always0.IN0
-enable => Decoder0.IN0
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-reset => cnt.OUTPUTSELECT
-plus => always0.IN1
-plus => Decoder2.IN0
-minus => always0.IN1
-minus => Decoder1.IN0
-cnt[0] <= cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[1] <= cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[2] <= cnt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[3] <= cnt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[4] <= cnt[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[5] <= cnt[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[6] <= cnt[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[7] <= cnt[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[8] <= cnt[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[9] <= cnt[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[10] <= cnt[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[11] <= cnt[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[12] <= cnt[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[13] <= cnt[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[14] <= cnt[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[15] <= cnt[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[16] <= cnt[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[17] <= cnt[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[18] <= cnt[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[19] <= cnt[19]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[20] <= cnt[20]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[21] <= cnt[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[22] <= cnt[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[23] <= cnt[23]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[24] <= cnt[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-cnt[25] <= cnt[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|RA02|Mode:keymod2|RisingEdgeDetector:editclick
-clk => prev.CLK
-in => prev.DATAIN
-in => out.IN1
-out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |RA02|DisplayHMS:disHMS

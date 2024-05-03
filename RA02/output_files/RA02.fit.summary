@@ -1,12 +1,12 @@
-Fitter Status : Successful - Fri May  3 18:37:00 2024
+Fitter Status : Successful - Fri May  3 20:21:15 2024
 Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 Revision Name : RA02
 Top-level Entity Name : RA02
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 406 / 32,070 ( 1 % )
-Total registers : 201
+Logic utilization (in ALMs) : 405 / 32,070 ( 1 % )
+Total registers : 203
 Total pins : 47 / 457 ( 10 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )
