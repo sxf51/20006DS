@@ -15,7 +15,7 @@ output [5: 0] hours, mins, secs);
 	 Counter #(.MAX(59), .WIDTH(6), .UP(1'b1))
         cm(.clk(clk), .enable((enable || (mode == 2'b11)) && secs == 59 && tick == (N-1)),
 			.reset(1'b0), .plus((mode == 2'b10) && plus), .minus((mode == 2'b10) && minus), .cnt(mins));
-	 Counter #(.MAX(23), .WIDTH(6), .UP(1'b1))
+	 Counter #(.MAX(23), .WIDTH(5), .UP(1'b1))
         ch(.clk(clk), .enable(enable && mins == 59 && secs == 59 && tick == (N-1)),
 			.reset(1'b0), .plus((mode == 2'b11) && plus), .minus((mode == 2'b11) && minus), .cnt(hours));
 endmodule

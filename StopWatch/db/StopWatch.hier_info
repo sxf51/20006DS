@@ -1,0 +1,454 @@
+|StopWatch
+CLOCK_50 => CLOCK_50.IN3
+KEY[0] => _.IN1
+KEY[1] => ~NO_FANOUT~
+KEY[2] => _.IN1
+KEY[3] => ~NO_FANOUT~
+HEX5[0] <= DisplayStopWatch:dsw.hex5
+HEX5[1] <= DisplayStopWatch:dsw.hex5
+HEX5[2] <= DisplayStopWatch:dsw.hex5
+HEX5[3] <= DisplayStopWatch:dsw.hex5
+HEX5[4] <= DisplayStopWatch:dsw.hex5
+HEX5[5] <= DisplayStopWatch:dsw.hex5
+HEX5[6] <= DisplayStopWatch:dsw.hex5
+HEX4[0] <= DisplayStopWatch:dsw.hex4
+HEX4[1] <= DisplayStopWatch:dsw.hex4
+HEX4[2] <= DisplayStopWatch:dsw.hex4
+HEX4[3] <= DisplayStopWatch:dsw.hex4
+HEX4[4] <= DisplayStopWatch:dsw.hex4
+HEX4[5] <= DisplayStopWatch:dsw.hex4
+HEX4[6] <= DisplayStopWatch:dsw.hex4
+HEX3[0] <= DisplayStopWatch:dsw.hex3
+HEX3[1] <= DisplayStopWatch:dsw.hex3
+HEX3[2] <= DisplayStopWatch:dsw.hex3
+HEX3[3] <= DisplayStopWatch:dsw.hex3
+HEX3[4] <= DisplayStopWatch:dsw.hex3
+HEX3[5] <= DisplayStopWatch:dsw.hex3
+HEX3[6] <= DisplayStopWatch:dsw.hex3
+HEX2[0] <= DisplayStopWatch:dsw.hex2
+HEX2[1] <= DisplayStopWatch:dsw.hex2
+HEX2[2] <= DisplayStopWatch:dsw.hex2
+HEX2[3] <= DisplayStopWatch:dsw.hex2
+HEX2[4] <= DisplayStopWatch:dsw.hex2
+HEX2[5] <= DisplayStopWatch:dsw.hex2
+HEX2[6] <= DisplayStopWatch:dsw.hex2
+HEX1[0] <= DisplayStopWatch:dsw.hex1
+HEX1[1] <= DisplayStopWatch:dsw.hex1
+HEX1[2] <= DisplayStopWatch:dsw.hex1
+HEX1[3] <= DisplayStopWatch:dsw.hex1
+HEX1[4] <= DisplayStopWatch:dsw.hex1
+HEX1[5] <= DisplayStopWatch:dsw.hex1
+HEX1[6] <= DisplayStopWatch:dsw.hex1
+HEX0[0] <= DisplayStopWatch:dsw.hex0
+HEX0[1] <= DisplayStopWatch:dsw.hex0
+HEX0[2] <= DisplayStopWatch:dsw.hex0
+HEX0[3] <= DisplayStopWatch:dsw.hex0
+HEX0[4] <= DisplayStopWatch:dsw.hex0
+HEX0[5] <= DisplayStopWatch:dsw.hex0
+HEX0[6] <= DisplayStopWatch:dsw.hex0
+
+
+|StopWatch|DisplayStopWatch:dsw
+ms_10[0] => Mod0.IN10
+ms_10[0] => Div0.IN10
+ms_10[1] => Mod0.IN9
+ms_10[1] => Div0.IN9
+ms_10[2] => Mod0.IN8
+ms_10[2] => Div0.IN8
+ms_10[3] => Mod0.IN7
+ms_10[3] => Div0.IN7
+ms_10[4] => Mod0.IN6
+ms_10[4] => Div0.IN6
+ms_10[5] => Mod0.IN5
+ms_10[5] => Div0.IN5
+ms_10[6] => Mod0.IN4
+ms_10[6] => Div0.IN4
+secs[0] => Mod1.IN9
+secs[0] => Div1.IN9
+secs[1] => Mod1.IN8
+secs[1] => Div1.IN8
+secs[2] => Mod1.IN7
+secs[2] => Div1.IN7
+secs[3] => Mod1.IN6
+secs[3] => Div1.IN6
+secs[4] => Mod1.IN5
+secs[4] => Div1.IN5
+secs[5] => Mod1.IN4
+secs[5] => Div1.IN4
+mins[0] => Mod2.IN9
+mins[0] => Div2.IN9
+mins[1] => Mod2.IN8
+mins[1] => Div2.IN8
+mins[2] => Mod2.IN7
+mins[2] => Div2.IN7
+mins[3] => Mod2.IN6
+mins[3] => Div2.IN6
+mins[4] => Mod2.IN5
+mins[4] => Div2.IN5
+mins[5] => Mod2.IN4
+mins[5] => Div2.IN4
+hex0[0] <= SSeg:ss0.sseg
+hex0[1] <= SSeg:ss0.sseg
+hex0[2] <= SSeg:ss0.sseg
+hex0[3] <= SSeg:ss0.sseg
+hex0[4] <= SSeg:ss0.sseg
+hex0[5] <= SSeg:ss0.sseg
+hex0[6] <= SSeg:ss0.sseg
+hex1[0] <= SSeg:ss1.sseg
+hex1[1] <= SSeg:ss1.sseg
+hex1[2] <= SSeg:ss1.sseg
+hex1[3] <= SSeg:ss1.sseg
+hex1[4] <= SSeg:ss1.sseg
+hex1[5] <= SSeg:ss1.sseg
+hex1[6] <= SSeg:ss1.sseg
+hex2[0] <= SSeg:ss2.sseg
+hex2[1] <= SSeg:ss2.sseg
+hex2[2] <= SSeg:ss2.sseg
+hex2[3] <= SSeg:ss2.sseg
+hex2[4] <= SSeg:ss2.sseg
+hex2[5] <= SSeg:ss2.sseg
+hex2[6] <= SSeg:ss2.sseg
+hex3[0] <= SSeg:ss3.sseg
+hex3[1] <= SSeg:ss3.sseg
+hex3[2] <= SSeg:ss3.sseg
+hex3[3] <= SSeg:ss3.sseg
+hex3[4] <= SSeg:ss3.sseg
+hex3[5] <= SSeg:ss3.sseg
+hex3[6] <= SSeg:ss3.sseg
+hex4[0] <= SSeg:ss4.sseg
+hex4[1] <= SSeg:ss4.sseg
+hex4[2] <= SSeg:ss4.sseg
+hex4[3] <= SSeg:ss4.sseg
+hex4[4] <= SSeg:ss4.sseg
+hex4[5] <= SSeg:ss4.sseg
+hex4[6] <= SSeg:ss4.sseg
+hex5[0] <= SSeg:ss5.sseg
+hex5[1] <= SSeg:ss5.sseg
+hex5[2] <= SSeg:ss5.sseg
+hex5[3] <= SSeg:ss5.sseg
+hex5[4] <= SSeg:ss5.sseg
+hex5[5] <= SSeg:ss5.sseg
+hex5[6] <= SSeg:ss5.sseg
+
+
+|StopWatch|DisplayStopWatch:dsw|SSeg:ss0
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+sseg[0] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[1] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[2] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[3] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[4] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[5] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[6] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|StopWatch|DisplayStopWatch:dsw|SSeg:ss1
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+sseg[0] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[1] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[2] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[3] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[4] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[5] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[6] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|StopWatch|DisplayStopWatch:dsw|SSeg:ss2
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+sseg[0] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[1] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[2] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[3] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[4] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[5] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[6] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|StopWatch|DisplayStopWatch:dsw|SSeg:ss3
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+sseg[0] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[1] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[2] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[3] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[4] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[5] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[6] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|StopWatch|DisplayStopWatch:dsw|SSeg:ss4
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+sseg[0] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[1] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[2] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[3] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[4] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[5] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[6] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|StopWatch|DisplayStopWatch:dsw|SSeg:ss5
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+enable => sseg.OUTPUTSELECT
+num[0] => Decoder0.IN3
+num[1] => Decoder0.IN2
+num[2] => Decoder0.IN1
+num[3] => Decoder0.IN0
+sseg[0] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[1] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[2] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[3] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[4] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[5] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+sseg[6] <= sseg.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|StopWatch|StopWatchMode:comb_3
+clk => clk.IN1
+in => in.IN1
+mode <= state.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|StopWatch|StopWatchMode:comb_3|RisingEdgeDetector:editclick
+clk => prev.CLK
+in => prev.DATAIN
+in => out.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|StopWatch|RisingEdgeDetector:editclick
+clk => prev.CLK
+in => prev.DATAIN
+in => out.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|StopWatch|StopWatchTime:swt
+clk => clk.IN4
+enable => enable.IN1
+reset => reset.IN4
+ms_10[0] <= Counter:cs.cnt
+ms_10[1] <= Counter:cs.cnt
+ms_10[2] <= Counter:cs.cnt
+ms_10[3] <= Counter:cs.cnt
+ms_10[4] <= Counter:cs.cnt
+ms_10[5] <= Counter:cs.cnt
+ms_10[6] <= Counter:cs.cnt
+secs[0] <= Counter:cm.cnt
+secs[1] <= Counter:cm.cnt
+secs[2] <= Counter:cm.cnt
+secs[3] <= Counter:cm.cnt
+secs[4] <= Counter:cm.cnt
+secs[5] <= Counter:cm.cnt
+mins[0] <= Counter:ch.cnt
+mins[1] <= Counter:ch.cnt
+mins[2] <= Counter:ch.cnt
+mins[3] <= Counter:ch.cnt
+mins[4] <= Counter:ch.cnt
+mins[5] <= Counter:ch.cnt
+
+
+|StopWatch|StopWatchTime:swt|Counter:divider
+clk => cnt[0]~reg0.CLK
+clk => cnt[1]~reg0.CLK
+clk => cnt[2]~reg0.CLK
+clk => cnt[3]~reg0.CLK
+clk => cnt[4]~reg0.CLK
+clk => cnt[5]~reg0.CLK
+clk => cnt[6]~reg0.CLK
+clk => cnt[7]~reg0.CLK
+clk => cnt[8]~reg0.CLK
+clk => cnt[9]~reg0.CLK
+clk => cnt[10]~reg0.CLK
+clk => cnt[11]~reg0.CLK
+clk => cnt[12]~reg0.CLK
+clk => cnt[13]~reg0.CLK
+clk => cnt[14]~reg0.CLK
+clk => cnt[15]~reg0.CLK
+clk => cnt[16]~reg0.CLK
+clk => cnt[17]~reg0.CLK
+clk => cnt[18]~reg0.CLK
+enable => always0.IN0
+enable => Decoder0.IN0
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+plus => always0.IN1
+plus => Decoder2.IN0
+minus => always0.IN1
+minus => Decoder1.IN0
+cnt[0] <= cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[1] <= cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[2] <= cnt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[3] <= cnt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[4] <= cnt[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[5] <= cnt[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[6] <= cnt[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[7] <= cnt[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[8] <= cnt[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[9] <= cnt[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[10] <= cnt[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[11] <= cnt[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[12] <= cnt[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[13] <= cnt[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[14] <= cnt[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[15] <= cnt[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[16] <= cnt[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[17] <= cnt[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[18] <= cnt[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|StopWatch|StopWatchTime:swt|Counter:cs
+clk => cnt[0]~reg0.CLK
+clk => cnt[1]~reg0.CLK
+clk => cnt[2]~reg0.CLK
+clk => cnt[3]~reg0.CLK
+clk => cnt[4]~reg0.CLK
+clk => cnt[5]~reg0.CLK
+clk => cnt[6]~reg0.CLK
+enable => always0.IN0
+enable => Decoder0.IN0
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+plus => always0.IN1
+plus => Decoder2.IN0
+minus => always0.IN1
+minus => Decoder1.IN0
+cnt[0] <= cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[1] <= cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[2] <= cnt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[3] <= cnt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[4] <= cnt[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[5] <= cnt[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[6] <= cnt[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|StopWatch|StopWatchTime:swt|Counter:cm
+clk => cnt[0]~reg0.CLK
+clk => cnt[1]~reg0.CLK
+clk => cnt[2]~reg0.CLK
+clk => cnt[3]~reg0.CLK
+clk => cnt[4]~reg0.CLK
+clk => cnt[5]~reg0.CLK
+enable => always0.IN0
+enable => Decoder0.IN0
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+plus => always0.IN1
+plus => Decoder2.IN0
+minus => always0.IN1
+minus => Decoder1.IN0
+cnt[0] <= cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[1] <= cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[2] <= cnt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[3] <= cnt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[4] <= cnt[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[5] <= cnt[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|StopWatch|StopWatchTime:swt|Counter:ch
+clk => cnt[0]~reg0.CLK
+clk => cnt[1]~reg0.CLK
+clk => cnt[2]~reg0.CLK
+clk => cnt[3]~reg0.CLK
+clk => cnt[4]~reg0.CLK
+clk => cnt[5]~reg0.CLK
+enable => always0.IN0
+enable => Decoder0.IN0
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+plus => always0.IN1
+plus => Decoder2.IN0
+minus => always0.IN1
+minus => Decoder1.IN0
+cnt[0] <= cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[1] <= cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[2] <= cnt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[3] <= cnt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[4] <= cnt[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[5] <= cnt[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
