@@ -4,20 +4,20 @@ input [5: 0] secs, mins, hours,
 output [6: 0] hex0, hex1, hex2, hex3, hex4, hex5);
 
 	wire [3: 0] secs_d1;
-	wire [3: 0] secs_d2;
+	wire [2: 0] secs_d2;
 	
 	wire [3: 0] mins_d1;
-	wire [3: 0] mins_d2;
+	wire [2: 0] mins_d2;
 	
 	wire [3: 0] hours_d1;
-	wire [3: 0] hours_d2;
+	wire [1: 0] hours_d2;
 
-	assign secs_d1 = secs % 6'd10;
-	assign secs_d2 = secs / 6'd10;
-	assign mins_d1 = mins % 6'd10;
-	assign mins_d2 = mins / 6'd10;
-	assign hours_d1 = hours % 6'd10;
-	assign hours_d2 = hours / 6'd10;
+	assign secs_d1 = secs % 4'd10;
+	assign secs_d2 = secs / 4'd10;
+	assign mins_d1 = mins % 4'd10;
+	assign mins_d2 = mins / 4'd10;
+	assign hours_d1 = hours % 4'd10;
+	assign hours_d2 = hours / 4'd10;
 	
 	SSeg ss0(.enable(enable != 2'b01), .num(secs_d1), .sseg(hex0));
 	SSeg ss1(.enable(enable != 2'b01), .num(secs_d2), .sseg(hex1));
