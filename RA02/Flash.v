@@ -17,7 +17,7 @@ module Flash
 	assign msf = tick/50_000;
 	
 	always @(posedge clk) begin
-		if(msf < 10 * DC/FRE) 
+		if(msf > 10 * DC/FRE) 
 			pwm <= 1'b0;
 		else pwm <= 1'b1;
 	end

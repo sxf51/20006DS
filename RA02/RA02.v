@@ -6,7 +6,7 @@ output [6: 0] HEX5, HEX4, HEX3, HEX2, HEX1, HEX0);
 
 	wire [5: 0] secs;
 	wire [5: 0] mins;
-	wire [5: 0] hours;
+	wire [4: 0] hours;
 	
 	wire plus;
 	wire minus;
@@ -26,7 +26,7 @@ output [6: 0] HEX5, HEX4, HEX3, HEX2, HEX1, HEX0);
 		fla_80(.clk(CLOCK_50), .enable(mode != 2'b00), .reset(1'b0), .pwm(pwm));
 	
 	//Display
-	DisplayHMS disHMS(.enable(mode & {pwm, pwm}), .secs(secs), .mins(mins), .hours(hours),
+	DisplayHMS disHMS(.enable(mode & {!pwm, !pwm}), .secs(secs), .mins(mins), .hours(hours),
 		.hex0(HEX0), .hex1(HEX1), .hex2(HEX2), .hex3(HEX3), .hex4(HEX4), .hex5(HEX5));
 	 
 endmodule

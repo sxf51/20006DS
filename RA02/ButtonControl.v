@@ -18,15 +18,16 @@ endmodule
 
 
 //Miller FSM, check if KEY is pressed.
-module PressHold ( input clk, input in, output out );
+module PressHold 
+	#(parameter FRE1 = 1, FRE2 = 10)( input clk, input in, output out );
 	
 	reg [1: 0] prev = 0;
 	reg [1: 0] next_prev;
 	
-	localparam N = 25_000_000;
+	localparam N = 50_000_000/FRE1;
 	localparam BWL = $clog2(N);
 	wire [BWL-1: 0] tick1;
-	localparam M = 5_000_000;
+	localparam M = 50_000_000/FRE2;
 	localparam BWP = $clog2(M);
 	wire [BWP-1: 0] tick2;
 	 
@@ -77,9 +78,6 @@ module Mode(input clk, input key,
 		
 	RisingEdgeDetector editclick(.clk(clk), .in(!key), .out(enter));
 	
-	wire [9: 0] ms;
-	assign ms = tick/50_000;
-	
 	always @(posedge clk)
 		state <= next_state;
 		
@@ -106,7 +104,7 @@ module ButtonControl(input clk,
 	output [1: 0] mode, 
 	output plus, minus);
 	
-	PressHold pl(.clk(clk), .in(!key[0] && key[1]), .out(plus));
-	PressHold mi(.clk(clk), .in(!key[1] && key[0]), .out(minus));
+	PressHold #(.FRE1(2), .FRE2(10)) pl(.clk(clk), .in(!key[0] && key[1]), .out(plus));
+	PressHold #(.FRE1(2), .FRE2(10)) mi(.clk(clk), .in(!key[1] && key[0]), .out(minus));
 	Mode keymod2(.clk(clk), .key(key[2]), .mode(mode));
 endmodule

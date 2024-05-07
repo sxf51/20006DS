@@ -39,20 +39,16 @@ module Counter
 	end
         
 	    always @(*)
-		  case(plus)
-				1'b0: case(minus)
-					 1'b0: case(enable)
-						 1'b1: next_cnt = (cnt == MAX) ? 1'd0 : (cnt + UP);
-						 default: next_cnt = cnt;
-					 endcase
-					 1'b1: next_cnt = (cnt == 1'd0) ? MAX : (cnt - 1'd1);
-					 default: next_cnt = cnt;
-					endcase
-				1'b1: case(minus)
-					 1'b0: next_cnt = (cnt == MAX) ? 1'd0 : (cnt + 1'd1);
-					 1'b1: next_cnt = cnt;
-					 default: next_cnt = cnt;
-					endcase
+		  case({plus, minus})
+				2'b00: case(enable)
+					1'b1: if(UP > 0) next_cnt = (cnt == MAX) ? 1'd0 : (cnt + UP);
+						else if(UP < 0) next_cnt = (cnt == 1'd0) ? MAX : (cnt + UP);
+						else next_cnt = cnt;
+					default: next_cnt = cnt;
+				endcase
+				2'b01: next_cnt = (cnt == 1'd0) ? MAX : (cnt - 1'd1);
+				2'b10: next_cnt = (cnt == MAX) ? 1'd0 : (cnt + 1'd1);
+				2'b11: next_cnt = cnt;
 				default: next_cnt = cnt;
 		  endcase
 endmodule
