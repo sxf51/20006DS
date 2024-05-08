@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue May  7 19:52:11 2024
+Analysis & Synthesis Status : Successful - Thu May  9 02:33:57 2024
 Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 Revision Name : Watch
 Top-level Entity Name : Watch
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 345
+Total registers : 346
 Total pins : 48
 Total virtual pins : 0
 Total block memory bits : 0

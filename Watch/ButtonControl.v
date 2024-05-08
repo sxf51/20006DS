@@ -138,28 +138,30 @@ module CountdownMode(input clk, input in, reset,
 	assign mode = state;
 endmodule
 
-module Buzzer(input clk, input in, enable, reset, 
+module Buzzer(input clk, input timeup, enable, reset, 
 	output buzzer);
 	
 	reg [1: 0] state, next_state;
-	wire enter;
+	wire enter1, enter2;
 	
-	RisingEdgeDetector editclick(.clk(clk), .in(enable), .out(enter));
+	RisingEdgeDetector editclick1(.clk(clk), .in(enable), .out(enter1));
+	RisingEdgeDetector editclick2(.clk(clk), .in(timeup), .out(enter2));
 
 	always @(posedge clk)
 		state <= next_state;
 		
 	always @(*) begin
-		if(reset) next_state = 2'b00;
+		if(reset) next_state = 2'b01;
 		else case(state)
-				2'b00: next_state = enter ? 2'b01: 2'b00;
-				2'b01: next_state = in ? 2'b10: 2'b01;
-				2'b10: next_state = enter ? 2'b01: 2'b10;
+				2'b00: next_state = enter1 ? 2'b01: 2'b00;
+				2'b01: next_state = enter2 ? 2'b10: 2'b01;
+				2'b10: next_state = timeup ? 2'b11: 2'b01;
+				2'b11: next_state = enter1 ? 2'b01: 2'b11;
 				default: next_state = 2'b00;
 			endcase
 	end
 	
-	assign buzzer = ((state == 2'b10) && !enable);
+	assign buzzer = ((state[1] == 1'b1) && !enable);
 endmodule
 
 //Key3 Mode, select Clock, StopTimer, CountdownTimer
