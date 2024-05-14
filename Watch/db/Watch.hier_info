@@ -1,5 +1,5 @@
 |Watch
-CLOCK_50 => CLOCK_50.IN4
+CLOCK_50 => CLOCK_50.IN5
 KEY[0] => _.IN1
 KEY[0] => _.IN1
 KEY[0] => _.IN1
@@ -51,7 +51,254 @@ HEX0[3] <= DisplayHMS:disHMS.hex0
 HEX0[4] <= DisplayHMS:disHMS.hex0
 HEX0[5] <= DisplayHMS:disHMS.hex0
 HEX0[6] <= DisplayHMS:disHMS.hex0
-LEDR[0] <= CountdownTimer:comb_38.buzz
+LEDR[0] <= CountdownTimer:cdt.buzz
+LEDR[1] <= <GND>
+LEDR[2] <= <GND>
+LEDR[3] <= <GND>
+LEDR[4] <= <GND>
+LEDR[5] <= LEDR.DB_MAX_OUTPUT_PORT_TYPE
+LEDR[6] <= Mode:modek3.gameled
+LEDR[7] <= Mode:modek3.countled
+LEDR[8] <= Mode:modek3.stopled
+LEDR[9] <= Mode:modek3.clockled
+
+
+|Watch|Flash:BreathLED
+clk => clk.IN1
+enable => enable.IN1
+reset => reset.IN1
+pwm[0] <= pwm[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Watch|Flash:BreathLED|Counter:editpress
+clk => cnt[0]~reg0.CLK
+clk => cnt[1]~reg0.CLK
+clk => cnt[2]~reg0.CLK
+clk => cnt[3]~reg0.CLK
+clk => cnt[4]~reg0.CLK
+clk => cnt[5]~reg0.CLK
+clk => cnt[6]~reg0.CLK
+clk => cnt[7]~reg0.CLK
+clk => cnt[8]~reg0.CLK
+clk => cnt[9]~reg0.CLK
+clk => cnt[10]~reg0.CLK
+clk => cnt[11]~reg0.CLK
+clk => cnt[12]~reg0.CLK
+clk => cnt[13]~reg0.CLK
+clk => cnt[14]~reg0.CLK
+clk => cnt[15]~reg0.CLK
+clk => cnt[16]~reg0.CLK
+clk => cnt[17]~reg0.CLK
+clk => cnt[18]~reg0.CLK
+enable => always0.IN0
+enable => Decoder0.IN0
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+reset => cnt.OUTPUTSELECT
+plus => always0.IN1
+plus => Mux0.IN3
+plus => Mux1.IN3
+plus => Mux2.IN3
+plus => Mux3.IN3
+plus => Mux4.IN3
+plus => Mux5.IN3
+plus => Mux6.IN3
+plus => Mux7.IN3
+plus => Mux8.IN3
+plus => Mux9.IN3
+plus => Mux10.IN3
+plus => Mux11.IN3
+plus => Mux12.IN3
+plus => Mux13.IN3
+plus => Mux14.IN3
+plus => Mux15.IN3
+plus => Mux16.IN3
+plus => Mux17.IN3
+plus => Mux18.IN3
+minus => always0.IN1
+minus => Mux0.IN4
+minus => Mux1.IN4
+minus => Mux2.IN4
+minus => Mux3.IN4
+minus => Mux4.IN4
+minus => Mux5.IN4
+minus => Mux6.IN4
+minus => Mux7.IN4
+minus => Mux8.IN4
+minus => Mux9.IN4
+minus => Mux10.IN4
+minus => Mux11.IN4
+minus => Mux12.IN4
+minus => Mux13.IN4
+minus => Mux14.IN4
+minus => Mux15.IN4
+minus => Mux16.IN4
+minus => Mux17.IN4
+minus => Mux18.IN4
+cnt[0] <= cnt[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[1] <= cnt[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[2] <= cnt[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[3] <= cnt[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[4] <= cnt[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[5] <= cnt[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[6] <= cnt[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[7] <= cnt[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[8] <= cnt[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[9] <= cnt[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[10] <= cnt[10]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[11] <= cnt[11]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[12] <= cnt[12]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[13] <= cnt[13]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[14] <= cnt[14]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[15] <= cnt[15]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[16] <= cnt[16]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[17] <= cnt[17]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+cnt[18] <= cnt[18]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Watch|Mux:mux
+mode[0] => Mux0.IN2
+mode[0] => Mux1.IN2
+mode[0] => Mux2.IN2
+mode[0] => Mux3.IN2
+mode[0] => Mux4.IN2
+mode[0] => Mux5.IN2
+mode[0] => Mux6.IN2
+mode[0] => Mux7.IN2
+mode[0] => Mux8.IN2
+mode[0] => Mux9.IN2
+mode[0] => Mux10.IN2
+mode[0] => Mux11.IN2
+mode[0] => Mux12.IN2
+mode[0] => Mux13.IN2
+mode[0] => Mux14.IN2
+mode[0] => Mux15.IN2
+mode[0] => Mux16.IN2
+mode[0] => Mux17.IN2
+mode[0] => Mux18.IN2
+mode[0] => Mux19.IN2
+mode[0] => Mux20.IN2
+mode[1] => Mux0.IN1
+mode[1] => Mux1.IN1
+mode[1] => Mux2.IN1
+mode[1] => Mux3.IN1
+mode[1] => Mux4.IN1
+mode[1] => Mux5.IN1
+mode[1] => Mux6.IN1
+mode[1] => Mux7.IN1
+mode[1] => Mux8.IN1
+mode[1] => Mux9.IN1
+mode[1] => Mux10.IN1
+mode[1] => Mux11.IN1
+mode[1] => Mux12.IN1
+mode[1] => Mux13.IN1
+mode[1] => Mux14.IN1
+mode[1] => Mux15.IN1
+mode[1] => Mux16.IN1
+mode[1] => Mux17.IN1
+mode[1] => Mux18.IN1
+mode[1] => Mux19.IN1
+mode[1] => Mux20.IN1
+secsclk[0] => Mux6.IN3
+secsclk[1] => Mux5.IN3
+secsclk[2] => Mux4.IN3
+secsclk[3] => Mux3.IN3
+secsclk[4] => Mux2.IN3
+secsclk[5] => Mux1.IN3
+secsclk[6] => Mux0.IN3
+minsclk[0] => Mux13.IN3
+minsclk[1] => Mux12.IN3
+minsclk[2] => Mux11.IN3
+minsclk[3] => Mux10.IN3
+minsclk[4] => Mux9.IN3
+minsclk[5] => Mux8.IN3
+minsclk[6] => Mux7.IN3
+hoursclk[0] => Mux20.IN3
+hoursclk[1] => Mux19.IN3
+hoursclk[2] => Mux18.IN3
+hoursclk[3] => Mux17.IN3
+hoursclk[4] => Mux16.IN3
+hoursclk[5] => Mux15.IN3
+hoursclk[6] => Mux14.IN3
+ms_10stw[0] => Mux6.IN4
+ms_10stw[1] => Mux5.IN4
+ms_10stw[2] => Mux4.IN4
+ms_10stw[3] => Mux3.IN4
+ms_10stw[4] => Mux2.IN4
+ms_10stw[5] => Mux1.IN4
+ms_10stw[6] => Mux0.IN4
+secsstw[0] => Mux13.IN4
+secsstw[1] => Mux12.IN4
+secsstw[2] => Mux11.IN4
+secsstw[3] => Mux10.IN4
+secsstw[4] => Mux9.IN4
+secsstw[5] => Mux8.IN4
+secsstw[6] => Mux7.IN4
+minsstw[0] => Mux20.IN4
+minsstw[1] => Mux19.IN4
+minsstw[2] => Mux18.IN4
+minsstw[3] => Mux17.IN4
+minsstw[4] => Mux16.IN4
+minsstw[5] => Mux15.IN4
+minsstw[6] => Mux14.IN4
+secscdwn[0] => Mux6.IN5
+secscdwn[1] => Mux5.IN5
+secscdwn[2] => Mux4.IN5
+secscdwn[3] => Mux3.IN5
+secscdwn[4] => Mux2.IN5
+secscdwn[5] => Mux1.IN5
+secscdwn[6] => Mux0.IN5
+minscdwn[0] => Mux13.IN5
+minscdwn[1] => Mux12.IN5
+minscdwn[2] => Mux11.IN5
+minscdwn[3] => Mux10.IN5
+minscdwn[4] => Mux9.IN5
+minscdwn[5] => Mux8.IN5
+minscdwn[6] => Mux7.IN5
+hourscdwn[0] => Mux20.IN5
+hourscdwn[1] => Mux19.IN5
+hourscdwn[2] => Mux18.IN5
+hourscdwn[3] => Mux17.IN5
+hourscdwn[4] => Mux16.IN5
+hourscdwn[5] => Mux15.IN5
+hourscdwn[6] => Mux14.IN5
+num0[0] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+num0[1] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+num0[2] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+num0[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+num0[4] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+num0[5] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+num0[6] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+num1[0] <= Mux13.DB_MAX_OUTPUT_PORT_TYPE
+num1[1] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+num1[2] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+num1[3] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+num1[4] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+num1[5] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+num1[6] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+num2[0] <= Mux20.DB_MAX_OUTPUT_PORT_TYPE
+num2[1] <= Mux19.DB_MAX_OUTPUT_PORT_TYPE
+num2[2] <= Mux18.DB_MAX_OUTPUT_PORT_TYPE
+num2[3] <= Mux17.DB_MAX_OUTPUT_PORT_TYPE
+num2[4] <= Mux16.DB_MAX_OUTPUT_PORT_TYPE
+num2[5] <= Mux15.DB_MAX_OUTPUT_PORT_TYPE
+num2[6] <= Mux14.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Watch|Mode:modek3
@@ -59,6 +306,10 @@ clk => clk.IN1
 in => in.IN1
 mode[0] <= mode.DB_MAX_OUTPUT_PORT_TYPE
 mode[1] <= mode.DB_MAX_OUTPUT_PORT_TYPE
+clockled <= clockled.DB_MAX_OUTPUT_PORT_TYPE
+stopled <= stopled.DB_MAX_OUTPUT_PORT_TYPE
+countled <= countled.DB_MAX_OUTPUT_PORT_TYPE
+gameled <= gameled.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Watch|Mode:modek3|RisingEdgeDetector:editclick
@@ -79,7 +330,6 @@ in1 => comb.IN1
 in1 => comb.IN1
 in1 => comb.IN1
 in2 => comb.IN0
-enable => comb.IN1
 enable => comb.IN1
 enable => comb.IN1
 enable => comb.IN1
@@ -1247,13 +1497,13 @@ mins[4] <= StopWatchTime:swt.mins
 mins[5] <= StopWatchTime:swt.mins
 
 
-|Watch|StopWatch:stw|StopWatchMode:comb_3
+|Watch|StopWatch:stw|StopWatchMode:swm
 clk => clk.IN1
 in => in.IN1
 mode <= state.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Watch|StopWatch:stw|StopWatchMode:comb_3|RisingEdgeDetector:editclick
+|Watch|StopWatch:stw|StopWatchMode:swm|RisingEdgeDetector:editclick
 clk => prev.CLK
 in => prev.DATAIN
 in => out.IN1
@@ -1510,7 +1760,7 @@ cnt[4] <= cnt[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 cnt[5] <= cnt[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Watch|CountdownTimer:comb_38
+|Watch|CountdownTimer:cdt
 clk => clk.IN5
 in0 => comb.IN0
 in1 => comb.IN0
@@ -1541,7 +1791,7 @@ hours[4] <= CountdownTime:cdt.hours
 buzz <= Buzzer:buz.buzzer
 
 
-|Watch|CountdownTimer:comb_38|PressHold:pl
+|Watch|CountdownTimer:cdt|PressHold:pl
 clk => clk.IN2
 in => Decoder0.IN0
 in => Mux1.IN2
@@ -1552,7 +1802,7 @@ in => Mux1.IN3
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Watch|CountdownTimer:comb_38|PressHold:pl|Counter:divider1
+|Watch|CountdownTimer:cdt|PressHold:pl|Counter:divider1
 clk => cnt[0]~reg0.CLK
 clk => cnt[1]~reg0.CLK
 clk => cnt[2]~reg0.CLK
@@ -1689,7 +1939,7 @@ cnt[24] <= cnt[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 cnt[25] <= cnt[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Watch|CountdownTimer:comb_38|PressHold:pl|Counter:divider2
+|Watch|CountdownTimer:cdt|PressHold:pl|Counter:divider2
 clk => cnt[0]~reg0.CLK
 clk => cnt[1]~reg0.CLK
 clk => cnt[2]~reg0.CLK
@@ -1811,28 +2061,28 @@ cnt[21] <= cnt[21]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 cnt[22] <= cnt[22]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Watch|CountdownTimer:comb_38|RisingEdgeDetector:red
+|Watch|CountdownTimer:cdt|RisingEdgeDetector:red
 clk => prev.CLK
 in => prev.DATAIN
 in => out.IN1
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Watch|CountdownTimer:comb_38|CountdownMode:cdmk0
+|Watch|CountdownTimer:cdt|CountdownMode:cdmk0
 clk => clk.IN1
 in => in.IN1
 reset => state.OUTPUTSELECT
 mode <= state.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Watch|CountdownTimer:comb_38|CountdownMode:cdmk0|RisingEdgeDetector:editclick
+|Watch|CountdownTimer:cdt|CountdownMode:cdmk0|RisingEdgeDetector:editclick
 clk => prev.CLK
 in => prev.DATAIN
 in => out.IN1
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Watch|CountdownTimer:comb_38|Buzzer:buz
+|Watch|CountdownTimer:cdt|Buzzer:buz
 clk => clk.IN2
 timeup => timeup.IN1
 enable => enable.IN1
@@ -1841,21 +2091,21 @@ reset => next_state[0].OUTPUTSELECT
 buzzer <= buzzer.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Watch|CountdownTimer:comb_38|Buzzer:buz|RisingEdgeDetector:editclick1
+|Watch|CountdownTimer:cdt|Buzzer:buz|RisingEdgeDetector:editclick1
 clk => prev.CLK
 in => prev.DATAIN
 in => out.IN1
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Watch|CountdownTimer:comb_38|Buzzer:buz|RisingEdgeDetector:editclick2
+|Watch|CountdownTimer:cdt|Buzzer:buz|RisingEdgeDetector:editclick2
 clk => prev.CLK
 in => prev.DATAIN
 in => out.IN1
 out <= out.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Watch|CountdownTimer:comb_38|CountdownTime:cdt
+|Watch|CountdownTimer:cdt|CountdownTime:cdt
 clk => clk.IN4
 enable => enable.IN1
 reset => reset.IN3
@@ -1881,7 +2131,7 @@ secs[4] <= Counter:cs.cnt
 secs[5] <= Counter:cs.cnt
 
 
-|Watch|CountdownTimer:comb_38|CountdownTime:cdt|Counter:divider
+|Watch|CountdownTimer:cdt|CountdownTime:cdt|Counter:divider
 clk => cnt[0]~reg0.CLK
 clk => cnt[1]~reg0.CLK
 clk => cnt[2]~reg0.CLK
@@ -2018,7 +2268,7 @@ cnt[24] <= cnt[24]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 cnt[25] <= cnt[25]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Watch|CountdownTimer:comb_38|CountdownTime:cdt|Counter:cs
+|Watch|CountdownTimer:cdt|CountdownTime:cdt|Counter:cs
 clk => cnt[0]~reg0.CLK
 clk => cnt[1]~reg0.CLK
 clk => cnt[2]~reg0.CLK
@@ -2055,7 +2305,7 @@ cnt[4] <= cnt[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 cnt[5] <= cnt[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Watch|CountdownTimer:comb_38|CountdownTime:cdt|Counter:cm
+|Watch|CountdownTimer:cdt|CountdownTime:cdt|Counter:cm
 clk => cnt[0]~reg0.CLK
 clk => cnt[1]~reg0.CLK
 clk => cnt[2]~reg0.CLK
@@ -2092,7 +2342,7 @@ cnt[4] <= cnt[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 cnt[5] <= cnt[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|Watch|CountdownTimer:comb_38|CountdownTime:cdt|Counter:ch
+|Watch|CountdownTimer:cdt|CountdownTime:cdt|Counter:ch
 clk => cnt[0]~reg0.CLK
 clk => cnt[1]~reg0.CLK
 clk => cnt[2]~reg0.CLK

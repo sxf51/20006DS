@@ -1,8 +1,0 @@
-
-State Machine - |RA01|Flash:comb_9|skey2
-Name skey2.011 skey2.010 skey2.001 skey2.000 skey2.100 
-skey2.000 0 0 0 0 0 
-skey2.001 0 0 1 1 0 
-skey2.010 0 1 0 1 0 
-skey2.011 1 0 0 1 0 
-skey2.100 0 0 0 1 1 

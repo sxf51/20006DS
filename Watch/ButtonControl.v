@@ -165,7 +165,8 @@ module Buzzer(input clk, input timeup, enable, reset,
 endmodule
 
 //Key3 Mode, select Clock, StopTimer, CountdownTimer
-module Mode(input clk, input in, output [1: 0] mode);
+module Mode(input clk, input in, output [1: 0] mode,
+	output clockled, stopled, countled, gameled);
 
 	reg [1: 0] state, next_state;
 	wire enter;
@@ -186,5 +187,9 @@ module Mode(input clk, input in, output [1: 0] mode);
 	end
 	
 	assign mode = state;
+	assign clockled = state == 2'b00;
+	assign stopled = state == 2'b01;
+	assign countled = state == 2'b10;
+	assign gameled = state == 2'b11;
 	
 endmodule

@@ -3,10 +3,9 @@ module Watch(
 	input CLOCK_50, 
 	input [3: 0] KEY,
 	output [6: 0] HEX5, HEX4, HEX3, HEX2, HEX1, HEX0,
-	output [0: 0] LEDR);
+	output [9: 0] LEDR);
 
 	wire [1: 0] mode;
-	reg [6: 0] num0, num1, num2;
 	
 	wire [5: 0] secsclk;
 	wire [5: 0] minsclk;
@@ -20,6 +19,46 @@ module Watch(
 	wire [5: 0] minscdwn;
 	wire [4: 0] hourscdwn;
 	
+	wire [6: 0] num0, num1, num2;
+	
+	wire pwm;
+	
+	Flash #(.FRE(100), .DC(1))
+		BreathLED(.clk(CLOCK_50), .enable(mode == 2'b11), .reset(1'b0), .pwm(pwm));
+	
+	assign LEDR[5] = pwm && (mode == 2'b11);
+	
+	Mux mux(.mode(mode), .secsclk(secsclk), .minsclk(minsclk), .hoursclk(hoursclk),
+		.ms_10stw(ms_10stw), .secsstw(secsstw), .minsstw(minsstw),
+		.secscdwn(secscdwn), .minscdwn(minscdwn), .hourscdwn(hourscdwn),
+		.num0(num0), .num1(num1), .num2(num2));
+	
+	Mode modek3(.clk(CLOCK_50), .in(!KEY[3]), .mode(mode),
+		.clockled(LEDR[9]), .stopled(LEDR[8]), .countled(LEDR[7]), .gameled(LEDR[6]));
+	
+	Clock clock(.clk(CLOCK_50), .in0(!KEY[0]), .in1(!KEY[1]),
+		.in2(!KEY[2]), .enable(mode == 2'b00), 
+		.secs(secsclk), .mins(minsclk), .hours(hoursclk), .flashmode(flashclk));
+		
+	StopWatch stw(.clk(CLOCK_50), .in0(!KEY[0]), .in2(!KEY[2]), 
+		.enable(mode == 2'b01), .ms_10(ms_10stw), .secs(secsstw), .mins(minsstw));
+		
+	CountdownTimer cdt(.clk(CLOCK_50), .in0(!KEY[0]), 
+		.in1(!KEY[1]), .in2(!KEY[2]), .enable(mode == 2'b10),
+		.secs(secscdwn), .mins(minscdwn), .hours(hourscdwn), .buzz(LEDR[0]));
+		
+	//Display
+	DisplayHMS disHMS(.enable({mode == 2'b00, mode == 2'b00} & flashclk), 
+		.num0(num0), .num1(num1), .num2(num2),
+		.hex0(HEX0), .hex1(HEX1), .hex2(HEX2), .hex3(HEX3), .hex4(HEX4), .hex5(HEX5));
+	
+endmodule
+
+module Mux(input [1: 0] mode,
+	input [6: 0] secsclk, minsclk, hoursclk,
+	input [6: 0] ms_10stw, secsstw, minsstw,
+	input [6: 0] secscdwn, minscdwn, hourscdwn,
+	output reg [6: 0] num0, num1, num2);
 	always @(*)
 		case(mode)
 			2'b00: begin
@@ -43,25 +82,6 @@ module Watch(
 				num2 = 0;
 			end
 		endcase
-	
-	Mode modek3(.clk(CLOCK_50), .in(!KEY[3]), .mode(mode));
-	
-	Clock clock(.clk(CLOCK_50), .in0(!KEY[0]), .in1(!KEY[1]),
-		.in2(!KEY[2]), .enable(mode == 2'b00), 
-		.secs(secsclk), .mins(minsclk), .hours(hoursclk), .flashmode(flashclk));
-		
-	StopWatch stw(.clk(CLOCK_50), .in0(!KEY[0]), .in2(!KEY[2]), 
-		.enable(mode == 2'b01), .ms_10(ms_10stw), .secs(secsstw), .mins(minsstw));
-		
-	CountdownTimer cdt(.clk(CLOCK_50), .in0(!KEY[0]), 
-		.in1(!KEY[1]), .in2(!KEY[2]), .enable(mode == 2'b10),
-		.secs(secscdwn), .mins(minscdwn), .hours(hourscdwn), .buzz(LEDR[0]));
-		
-	//Display
-	DisplayHMS disHMS(.enable({mode == 2'b00, mode == 2'b00} & flashclk), 
-		.num0(num0), .num1(num1), .num2(num2),
-		.hex0(HEX0), .hex1(HEX1), .hex2(HEX2), .hex3(HEX3), .hex4(HEX4), .hex5(HEX5));
-	
 endmodule
 
 module Clock(
@@ -82,7 +102,7 @@ module Clock(
 	ClockMode keymod2(.clk(clk), .in(enable && in2), .mode(mode));
 	
 	//Time
-	Time t(.clk(clk), .enable(enable && !in0 && !in1), .reset(enable && in0 && in1), .mode(mode),
+	Time t(.clk(clk), .enable(!in0 && !in1), .reset(enable && in0 && in1), .mode(mode),
 		.plus(plus), .minus(minus), .hours(hours), .mins(mins), .secs(secs));
 	
 	//FlashControl
