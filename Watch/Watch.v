@@ -19,18 +19,22 @@ module Watch(
 	wire [5: 0] minscdwn;
 	wire [4: 0] hourscdwn;
 	
+	wire [6: 0] n0, n1, n2;
+	
 	wire [6: 0] num0, num1, num2;
 	
 	wire pwm;
+	wire [2: 0] led;
 	
-	Flash #(.FRE(100), .DC(1))
-		BreathLED(.clk(CLOCK_50), .enable(mode == 2'b11), .reset(1'b0), .pwm(pwm));
+	BreathLED breathled(.clk(CLOCK_50), .enable(1'b1), .reset(1'b0), .pwm(pwm));
 	
 	assign LEDR[5] = pwm && (mode == 2'b11);
+	assign LEDR[1] = pwm && (mode == 2'b11);
 	
 	Mux mux(.mode(mode), .secsclk(secsclk), .minsclk(minsclk), .hoursclk(hoursclk),
 		.ms_10stw(ms_10stw), .secsstw(secsstw), .minsstw(minsstw),
 		.secscdwn(secscdwn), .minscdwn(minscdwn), .hourscdwn(hourscdwn),
+		.n0(n0), .n1(n1), .n2(n2),
 		.num0(num0), .num1(num1), .num2(num2));
 	
 	Mode modek3(.clk(CLOCK_50), .in(!KEY[3]), .mode(mode),
@@ -47,6 +51,13 @@ module Watch(
 		.in1(!KEY[1]), .in2(!KEY[2]), .enable(mode == 2'b10),
 		.secs(secscdwn), .mins(minscdwn), .hours(hourscdwn), .buzz(LEDR[0]));
 		
+	Game(.clk(CLOCK_50), .enable(mode == 2'b11),
+		.in0(!KEY[0]), .in1(!KEY[1]), .in2(!KEY[2]),
+		.n0(n0), .n1(n1), .n2(n2),
+		.led(led));
+		
+	assign LEDR[4: 2] = led & {mode == 2'b11, mode == 2'b11, mode == 2'b11};
+		
 	//Display
 	DisplayHMS disHMS(.enable({mode == 2'b00, mode == 2'b00} & flashclk), 
 		.num0(num0), .num1(num1), .num2(num2),
@@ -58,6 +69,7 @@ module Mux(input [1: 0] mode,
 	input [6: 0] secsclk, minsclk, hoursclk,
 	input [6: 0] ms_10stw, secsstw, minsstw,
 	input [6: 0] secscdwn, minscdwn, hourscdwn,
+	input [6: 0] n0, n1, n2,
 	output reg [6: 0] num0, num1, num2);
 	always @(*)
 		case(mode)
@@ -75,6 +87,11 @@ module Mux(input [1: 0] mode,
 				num0 = secscdwn;
 				num1 = minscdwn;
 				num2 = hourscdwn;
+			end
+			2'b11: begin
+				num0 = n0;
+				num1 = n1;
+				num2 = n2;
 			end
 			default: begin
 				num0 = 0;
@@ -153,4 +170,65 @@ module CountdownTimer(input clk, input in0, in1, in2, enable,
 	CountdownTime cdt(.clk(clk), .enable(!in1 && mode), .reset(reset),
 		.plus(plus), .minus(1'b0), .hours(hours), .mins(mins), .secs(secs));
 	
+endmodule
+
+module Game(
+	input clk, enable,
+	input in0, in1, in2,
+	output [6: 0] n0, n1, n2,
+	output reg [2: 0] led);
+	
+	wire [1: 0] randi;
+	
+	wire enter0, enter1, enter2;
+	
+	RisingEdgeDetector red0 (. clk(clk), .in(enable && in0) , .out(enter0));
+	RisingEdgeDetector red1 (. clk(clk), .in(enable && in1) , .out(enter1));
+	RisingEdgeDetector red2 (. clk(clk), .in(enable && in2) , .out(enter2));
+	
+	Random #(.MIN(1), .MAX(3)) random(.clk(clk), .in(enter0 || enter1 || enter2), .randi(randi));
+
+	always @(posedge clk) begin
+		case(randi)
+			0: led <= 3'b000;
+			1: led <= 3'b001;
+			2: led <= 3'b010;
+			3: led <= 3'b100;
+			default: led <= 3'b000;
+		endcase
+	end
+	
+	Counter #(.MAX(99), .WIDTH(7), .UP(1'b1))
+		cn0(.clk(clk), .enable(1'b0),
+		.reset(reset), .plus(plus), .minus(1'b0), .cnt(n0));
+	Counter #(.MAX(99), .WIDTH(7), .UP(1'b1))
+		cn1(.clk(clk), .enable(1'b0),
+		.reset(reset), .plus(n0 == 99 && plus), .minus(1'b0), .cnt(n1));
+	Counter #(.MAX(99), .WIDTH(7), .UP(1'b1))
+		cn2(.clk(clk), .enable(1'b0),
+		.reset(reset), .plus(n0 == 99 && n1 == 99 && plus), .minus(1'b0), .cnt(n2));
+	
+	reg plus, reset;
+	
+	always @(*) begin
+		case(led)
+			3'b001: begin 
+				plus = enter0 ? 1'b1 : 1'b0;
+				reset = (enter1 || enter2) ? 1'b1 : 1'b0;
+			end
+			3'b010: begin 
+				plus = enter1 ? 1'b1 : 1'b0;
+				reset = (enter0 || enter2) ? 1'b1 : 1'b0;
+			end
+			3'b100: begin 
+				plus = enter2 ? 1'b1 : 1'b0;
+				reset = (enter0 || enter1) ? 1'b1 : 1'b0;
+			end
+			default: begin 
+				plus = 1'b0;
+				reset = 1'b0;
+			end
+		endcase
+	end
+
 endmodule

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Watch
-Tue May 14 19:11:43 2024
+Thu May 16 22:28:55 2024
 Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 
 
@@ -14,69 +14,81 @@ Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. State Machine - |Watch|Mode:modek3|state
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Parameter Settings for User Entity Instance: Flash:BreathLED
- 13. Parameter Settings for User Entity Instance: Flash:BreathLED|Counter:editpress
- 14. Parameter Settings for User Entity Instance: Clock:clock|PressHold:pl
- 15. Parameter Settings for User Entity Instance: Clock:clock|PressHold:pl|Counter:divider1
- 16. Parameter Settings for User Entity Instance: Clock:clock|PressHold:pl|Counter:divider2
- 17. Parameter Settings for User Entity Instance: Clock:clock|PressHold:mi
- 18. Parameter Settings for User Entity Instance: Clock:clock|PressHold:mi|Counter:divider1
- 19. Parameter Settings for User Entity Instance: Clock:clock|PressHold:mi|Counter:divider2
- 20. Parameter Settings for User Entity Instance: Clock:clock|ClockMode:keymod2|Counter:editpress
- 21. Parameter Settings for User Entity Instance: Clock:clock|Time:t|Counter:divider
- 22. Parameter Settings for User Entity Instance: Clock:clock|Time:t|Counter:cs
- 23. Parameter Settings for User Entity Instance: Clock:clock|Time:t|Counter:cm
- 24. Parameter Settings for User Entity Instance: Clock:clock|Time:t|Counter:ch
- 25. Parameter Settings for User Entity Instance: Clock:clock|Flash:fla_80
- 26. Parameter Settings for User Entity Instance: Clock:clock|Flash:fla_80|Counter:editpress
- 27. Parameter Settings for User Entity Instance: StopWatch:stw|StopWatchTime:swt|Counter:divider
- 28. Parameter Settings for User Entity Instance: StopWatch:stw|StopWatchTime:swt|Counter:cs
- 29. Parameter Settings for User Entity Instance: StopWatch:stw|StopWatchTime:swt|Counter:cm
- 30. Parameter Settings for User Entity Instance: StopWatch:stw|StopWatchTime:swt|Counter:ch
- 31. Parameter Settings for User Entity Instance: CountdownTimer:cdt|PressHold:pl
- 32. Parameter Settings for User Entity Instance: CountdownTimer:cdt|PressHold:pl|Counter:divider1
- 33. Parameter Settings for User Entity Instance: CountdownTimer:cdt|PressHold:pl|Counter:divider2
- 34. Parameter Settings for User Entity Instance: CountdownTimer:cdt|CountdownTime:cdt|Counter:divider
- 35. Parameter Settings for User Entity Instance: CountdownTimer:cdt|CountdownTime:cdt|Counter:cs
- 36. Parameter Settings for User Entity Instance: CountdownTimer:cdt|CountdownTime:cdt|Counter:cm
- 37. Parameter Settings for User Entity Instance: CountdownTimer:cdt|CountdownTime:cdt|Counter:ch
- 38. Parameter Settings for Inferred Entity Instance: DisplayHMS:disHMS|lpm_divide:Div2
- 39. Parameter Settings for Inferred Entity Instance: DisplayHMS:disHMS|lpm_divide:Mod2
- 40. Parameter Settings for Inferred Entity Instance: DisplayHMS:disHMS|lpm_divide:Div1
- 41. Parameter Settings for Inferred Entity Instance: DisplayHMS:disHMS|lpm_divide:Mod1
- 42. Parameter Settings for Inferred Entity Instance: DisplayHMS:disHMS|lpm_divide:Div0
- 43. Parameter Settings for Inferred Entity Instance: DisplayHMS:disHMS|lpm_divide:Mod0
- 44. Parameter Settings for Inferred Entity Instance: Clock:clock|Flash:fla_80|lpm_divide:Div0
- 45. Parameter Settings for Inferred Entity Instance: Flash:BreathLED|lpm_divide:Div0
- 46. Port Connectivity Checks: "CountdownTimer:cdt|CountdownTime:cdt|Counter:ch"
- 47. Port Connectivity Checks: "CountdownTimer:cdt|CountdownTime:cdt|Counter:divider"
- 48. Port Connectivity Checks: "CountdownTimer:cdt|CountdownTime:cdt"
- 49. Port Connectivity Checks: "CountdownTimer:cdt|CountdownMode:cdmk0"
- 50. Port Connectivity Checks: "CountdownTimer:cdt|PressHold:pl|Counter:divider2"
- 51. Port Connectivity Checks: "CountdownTimer:cdt|PressHold:pl|Counter:divider1"
- 52. Port Connectivity Checks: "StopWatch:stw|StopWatchTime:swt|Counter:ch"
- 53. Port Connectivity Checks: "StopWatch:stw|StopWatchTime:swt|Counter:cm"
- 54. Port Connectivity Checks: "StopWatch:stw|StopWatchTime:swt|Counter:cs"
- 55. Port Connectivity Checks: "StopWatch:stw|StopWatchTime:swt|Counter:divider"
- 56. Port Connectivity Checks: "Clock:clock|Flash:fla_80|Counter:editpress"
- 57. Port Connectivity Checks: "Clock:clock|Flash:fla_80"
- 58. Port Connectivity Checks: "Clock:clock|Time:t|Counter:ch"
- 59. Port Connectivity Checks: "Clock:clock|Time:t|Counter:cm"
- 60. Port Connectivity Checks: "Clock:clock|Time:t|Counter:cs"
- 61. Port Connectivity Checks: "Clock:clock|Time:t|Counter:divider"
- 62. Port Connectivity Checks: "Clock:clock|Time:t"
- 63. Port Connectivity Checks: "Clock:clock|ClockMode:keymod2|Counter:editpress"
- 64. Port Connectivity Checks: "Clock:clock|PressHold:pl|Counter:divider2"
- 65. Port Connectivity Checks: "Clock:clock|PressHold:pl|Counter:divider1"
- 66. Port Connectivity Checks: "Mux:mux"
- 67. Port Connectivity Checks: "Flash:BreathLED|Counter:editpress"
- 68. Port Connectivity Checks: "Flash:BreathLED"
- 69. Post-Synthesis Netlist Statistics for Top Partition
- 70. Elapsed Time Per Partition
- 71. Analysis & Synthesis Messages
+  9. User-Specified and Inferred Latches
+ 10. Registers Removed During Synthesis
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Parameter Settings for User Entity Instance: BreathLED:breathled
+ 14. Parameter Settings for User Entity Instance: BreathLED:breathled|Counter:editpress
+ 15. Parameter Settings for User Entity Instance: Clock:clock|PressHold:pl
+ 16. Parameter Settings for User Entity Instance: Clock:clock|PressHold:pl|Counter:divider1
+ 17. Parameter Settings for User Entity Instance: Clock:clock|PressHold:pl|Counter:divider2
+ 18. Parameter Settings for User Entity Instance: Clock:clock|PressHold:mi
+ 19. Parameter Settings for User Entity Instance: Clock:clock|PressHold:mi|Counter:divider1
+ 20. Parameter Settings for User Entity Instance: Clock:clock|PressHold:mi|Counter:divider2
+ 21. Parameter Settings for User Entity Instance: Clock:clock|ClockMode:keymod2|Counter:editpress
+ 22. Parameter Settings for User Entity Instance: Clock:clock|Time:t|Counter:divider
+ 23. Parameter Settings for User Entity Instance: Clock:clock|Time:t|Counter:cs
+ 24. Parameter Settings for User Entity Instance: Clock:clock|Time:t|Counter:cm
+ 25. Parameter Settings for User Entity Instance: Clock:clock|Time:t|Counter:ch
+ 26. Parameter Settings for User Entity Instance: Clock:clock|Flash:fla_80
+ 27. Parameter Settings for User Entity Instance: Clock:clock|Flash:fla_80|Counter:editpress
+ 28. Parameter Settings for User Entity Instance: StopWatch:stw|StopWatchTime:swt|Counter:divider
+ 29. Parameter Settings for User Entity Instance: StopWatch:stw|StopWatchTime:swt|Counter:cs
+ 30. Parameter Settings for User Entity Instance: StopWatch:stw|StopWatchTime:swt|Counter:cm
+ 31. Parameter Settings for User Entity Instance: StopWatch:stw|StopWatchTime:swt|Counter:ch
+ 32. Parameter Settings for User Entity Instance: CountdownTimer:cdt|PressHold:pl
+ 33. Parameter Settings for User Entity Instance: CountdownTimer:cdt|PressHold:pl|Counter:divider1
+ 34. Parameter Settings for User Entity Instance: CountdownTimer:cdt|PressHold:pl|Counter:divider2
+ 35. Parameter Settings for User Entity Instance: CountdownTimer:cdt|CountdownTime:cdt|Counter:divider
+ 36. Parameter Settings for User Entity Instance: CountdownTimer:cdt|CountdownTime:cdt|Counter:cs
+ 37. Parameter Settings for User Entity Instance: CountdownTimer:cdt|CountdownTime:cdt|Counter:cm
+ 38. Parameter Settings for User Entity Instance: CountdownTimer:cdt|CountdownTime:cdt|Counter:ch
+ 39. Parameter Settings for User Entity Instance: Game:comb_25|Random:random
+ 40. Parameter Settings for User Entity Instance: Game:comb_25|Random:random|Counter:sd
+ 41. Parameter Settings for User Entity Instance: Game:comb_25|Counter:cn0
+ 42. Parameter Settings for User Entity Instance: Game:comb_25|Counter:cn1
+ 43. Parameter Settings for User Entity Instance: Game:comb_25|Counter:cn2
+ 44. Parameter Settings for Inferred Entity Instance: DisplayHMS:disHMS|lpm_divide:Div2
+ 45. Parameter Settings for Inferred Entity Instance: DisplayHMS:disHMS|lpm_divide:Mod2
+ 46. Parameter Settings for Inferred Entity Instance: DisplayHMS:disHMS|lpm_divide:Div1
+ 47. Parameter Settings for Inferred Entity Instance: DisplayHMS:disHMS|lpm_divide:Mod1
+ 48. Parameter Settings for Inferred Entity Instance: DisplayHMS:disHMS|lpm_divide:Div0
+ 49. Parameter Settings for Inferred Entity Instance: DisplayHMS:disHMS|lpm_divide:Mod0
+ 50. Parameter Settings for Inferred Entity Instance: Clock:clock|Flash:fla_80|lpm_divide:Div0
+ 51. Parameter Settings for Inferred Entity Instance: BreathLED:breathled|lpm_divide:Div0
+ 52. Parameter Settings for Inferred Entity Instance: BreathLED:breathled|lpm_divide:Mod0
+ 53. Port Connectivity Checks: "Game:comb_25|Counter:cn2"
+ 54. Port Connectivity Checks: "Game:comb_25|Counter:cn1"
+ 55. Port Connectivity Checks: "Game:comb_25|Counter:cn0"
+ 56. Port Connectivity Checks: "Game:comb_25|Random:random|Counter:sd"
+ 57. Port Connectivity Checks: "Game:comb_25|Random:random"
+ 58. Port Connectivity Checks: "CountdownTimer:cdt|CountdownTime:cdt|Counter:ch"
+ 59. Port Connectivity Checks: "CountdownTimer:cdt|CountdownTime:cdt|Counter:divider"
+ 60. Port Connectivity Checks: "CountdownTimer:cdt|CountdownTime:cdt"
+ 61. Port Connectivity Checks: "CountdownTimer:cdt|CountdownMode:cdmk0"
+ 62. Port Connectivity Checks: "CountdownTimer:cdt|PressHold:pl|Counter:divider2"
+ 63. Port Connectivity Checks: "CountdownTimer:cdt|PressHold:pl|Counter:divider1"
+ 64. Port Connectivity Checks: "StopWatch:stw|StopWatchTime:swt|Counter:ch"
+ 65. Port Connectivity Checks: "StopWatch:stw|StopWatchTime:swt|Counter:cm"
+ 66. Port Connectivity Checks: "StopWatch:stw|StopWatchTime:swt|Counter:cs"
+ 67. Port Connectivity Checks: "StopWatch:stw|StopWatchTime:swt|Counter:divider"
+ 68. Port Connectivity Checks: "Clock:clock|Flash:fla_80|Counter:editpress"
+ 69. Port Connectivity Checks: "Clock:clock|Flash:fla_80"
+ 70. Port Connectivity Checks: "Clock:clock|Time:t|Counter:ch"
+ 71. Port Connectivity Checks: "Clock:clock|Time:t|Counter:cm"
+ 72. Port Connectivity Checks: "Clock:clock|Time:t|Counter:cs"
+ 73. Port Connectivity Checks: "Clock:clock|Time:t|Counter:divider"
+ 74. Port Connectivity Checks: "Clock:clock|Time:t"
+ 75. Port Connectivity Checks: "Clock:clock|ClockMode:keymod2|Counter:editpress"
+ 76. Port Connectivity Checks: "Clock:clock|PressHold:pl|Counter:divider2"
+ 77. Port Connectivity Checks: "Clock:clock|PressHold:pl|Counter:divider1"
+ 78. Port Connectivity Checks: "Mux:mux"
+ 79. Port Connectivity Checks: "BreathLED:breathled|Counter:editpress"
+ 80. Port Connectivity Checks: "BreathLED:breathled"
+ 81. Post-Synthesis Netlist Statistics for Top Partition
+ 82. Elapsed Time Per Partition
+ 83. Analysis & Synthesis Messages
 
 
 
@@ -103,13 +115,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +---------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Tue May 14 19:11:43 2024          ;
+; Analysis & Synthesis Status     ; Successful - Thu May 16 22:28:55 2024          ;
 ; Quartus Prime Version           ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
 ; Revision Name                   ; Watch                                          ;
 ; Top-level Entity Name           ; Watch                                          ;
 ; Family                          ; Cyclone V                                      ;
 ; Logic utilization (in ALMs)     ; N/A                                            ;
-; Total registers                 ; 366                                            ;
+; Total registers                 ; 404                                            ;
 ; Total pins                      ; 57                                             ;
 ; Total virtual pins              ; 0                                              ;
 ; Total block memory bits         ; 0                                              ;
@@ -242,6 +254,7 @@ https://fpgasoftware.intel.com/eula.
 ; ButtonControl.v                  ; yes             ; User Verilog HDL File        ; D:/Verilog/Watch/ButtonControl.v                                              ;         ;
 ; Time.v                           ; yes             ; User Verilog HDL File        ; D:/Verilog/Watch/Time.v                                                       ;         ;
 ; Watch.v                          ; yes             ; User Verilog HDL File        ; D:/Verilog/Watch/Watch.v                                                      ;         ;
+; Random.v                         ; yes             ; User Verilog HDL File        ; D:/Verilog/Watch/Random.v                                                     ;         ;
 ; lpm_divide.tdf                   ; yes             ; Megafunction                 ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_divide.tdf      ;         ;
 ; abs_divider.inc                  ; yes             ; Megafunction                 ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/abs_divider.inc     ;         ;
 ; sign_div_unsign.inc              ; yes             ; Megafunction                 ; d:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/sign_div_unsign.inc ;         ;
@@ -253,9 +266,12 @@ https://fpgasoftware.intel.com/eula.
 ; db/lpm_divide_7dm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Verilog/Watch/db/lpm_divide_7dm.tdf                                        ;         ;
 ; db/sign_div_unsign_dnh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Verilog/Watch/db/sign_div_unsign_dnh.tdf                                   ;         ;
 ; db/alt_u_div_03f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Verilog/Watch/db/alt_u_div_03f.tdf                                         ;         ;
-; db/lpm_divide_adm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Verilog/Watch/db/lpm_divide_adm.tdf                                        ;         ;
-; db/sign_div_unsign_gnh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Verilog/Watch/db/sign_div_unsign_gnh.tdf                                   ;         ;
-; db/alt_u_div_63f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Verilog/Watch/db/alt_u_div_63f.tdf                                         ;         ;
+; db/lpm_divide_8dm.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Verilog/Watch/db/lpm_divide_8dm.tdf                                        ;         ;
+; db/sign_div_unsign_enh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Verilog/Watch/db/sign_div_unsign_enh.tdf                                   ;         ;
+; db/alt_u_div_23f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Verilog/Watch/db/alt_u_div_23f.tdf                                         ;         ;
+; db/lpm_divide_55m.tdf            ; yes             ; Auto-Generated Megafunction  ; D:/Verilog/Watch/db/lpm_divide_55m.tdf                                        ;         ;
+; db/sign_div_unsign_9nh.tdf       ; yes             ; Auto-Generated Megafunction  ; D:/Verilog/Watch/db/sign_div_unsign_9nh.tdf                                   ;         ;
+; db/alt_u_div_n2f.tdf             ; yes             ; Auto-Generated Megafunction  ; D:/Verilog/Watch/db/alt_u_div_n2f.tdf                                         ;         ;
 +----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------+---------+
 
 
@@ -264,25 +280,25 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimate of Logic utilization (ALMs needed) ; 732            ;
+; Estimate of Logic utilization (ALMs needed) ; 1149           ;
 ;                                             ;                ;
-; Combinational ALUT usage for logic          ; 1357           ;
+; Combinational ALUT usage for logic          ; 2176           ;
 ;     -- 7 input functions                    ; 0              ;
-;     -- 6 input functions                    ; 105            ;
-;     -- 5 input functions                    ; 101            ;
-;     -- 4 input functions                    ; 184            ;
-;     -- <=3 input functions                  ; 967            ;
+;     -- 6 input functions                    ; 121            ;
+;     -- 5 input functions                    ; 87             ;
+;     -- 4 input functions                    ; 417            ;
+;     -- <=3 input functions                  ; 1551           ;
 ;                                             ;                ;
-; Dedicated logic registers                   ; 366            ;
+; Dedicated logic registers                   ; 404            ;
 ;                                             ;                ;
 ; I/O pins                                    ; 57             ;
 ;                                             ;                ;
 ; Total DSP Blocks                            ; 0              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 366            ;
-; Total fan-out                               ; 5560           ;
-; Average fan-out                             ; 3.03           ;
+; Maximum fan-out                             ; 404            ;
+; Total fan-out                               ; 8215           ;
+; Average fan-out                             ; 3.05           ;
 +---------------------------------------------+----------------+
 
 
@@ -291,9 +307,19 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                             ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |Watch                                       ; 1357 (6)            ; 366 (0)                   ; 0                 ; 0          ; 57   ; 0            ; |Watch                                                                                                                          ; Watch               ; work         ;
-;    |Clock:clock|                             ; 666 (4)             ; 199 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |Watch|Clock:clock                                                                                                              ; Clock               ; work         ;
-;       |ClockMode:keymod2|                    ; 37 (9)              ; 30 (3)                    ; 0                 ; 0          ; 0    ; 0            ; |Watch|Clock:clock|ClockMode:keymod2                                                                                            ; ClockMode           ; work         ;
+; |Watch                                       ; 2176 (5)            ; 404 (0)                   ; 0                 ; 0          ; 57   ; 0            ; |Watch                                                                                                                          ; Watch               ; work         ;
+;    |BreathLED:breathled|                     ; 893 (8)             ; 28 (2)                    ; 0                 ; 0          ; 0    ; 0            ; |Watch|BreathLED:breathled                                                                                                      ; BreathLED           ; work         ;
+;       |Counter:editpress|                    ; 32 (32)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |Watch|BreathLED:breathled|Counter:editpress                                                                                    ; Counter             ; work         ;
+;       |lpm_divide:Div0|                      ; 421 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|BreathLED:breathled|lpm_divide:Div0                                                                                      ; lpm_divide          ; work         ;
+;          |lpm_divide_8dm:auto_generated|     ; 421 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|BreathLED:breathled|lpm_divide:Div0|lpm_divide_8dm:auto_generated                                                        ; lpm_divide_8dm      ; work         ;
+;             |sign_div_unsign_enh:divider|    ; 421 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|BreathLED:breathled|lpm_divide:Div0|lpm_divide_8dm:auto_generated|sign_div_unsign_enh:divider                            ; sign_div_unsign_enh ; work         ;
+;                |alt_u_div_23f:divider|       ; 421 (421)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|BreathLED:breathled|lpm_divide:Div0|lpm_divide_8dm:auto_generated|sign_div_unsign_enh:divider|alt_u_div_23f:divider      ; alt_u_div_23f       ; work         ;
+;       |lpm_divide:Mod0|                      ; 432 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|BreathLED:breathled|lpm_divide:Mod0                                                                                      ; lpm_divide          ; work         ;
+;          |lpm_divide_55m:auto_generated|     ; 432 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|BreathLED:breathled|lpm_divide:Mod0|lpm_divide_55m:auto_generated                                                        ; lpm_divide_55m      ; work         ;
+;             |sign_div_unsign_9nh:divider|    ; 432 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|BreathLED:breathled|lpm_divide:Mod0|lpm_divide_55m:auto_generated|sign_div_unsign_9nh:divider                            ; sign_div_unsign_9nh ; work         ;
+;                |alt_u_div_n2f:divider|       ; 432 (432)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|BreathLED:breathled|lpm_divide:Mod0|lpm_divide_55m:auto_generated|sign_div_unsign_9nh:divider|alt_u_div_n2f:divider      ; alt_u_div_n2f       ; work         ;
+;    |Clock:clock|                             ; 667 (4)             ; 199 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |Watch|Clock:clock                                                                                                              ; Clock               ; work         ;
+;       |ClockMode:keymod2|                    ; 38 (10)             ; 30 (3)                    ; 0                 ; 0          ; 0    ; 0            ; |Watch|Clock:clock|ClockMode:keymod2                                                                                            ; ClockMode           ; work         ;
 ;          |Counter:editpress|                 ; 28 (28)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |Watch|Clock:clock|ClockMode:keymod2|Counter:editpress                                                                          ; Counter             ; work         ;
 ;          |RisingEdgeDetector:editclick|      ; 0 (0)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|Clock:clock|ClockMode:keymod2|RisingEdgeDetector:editclick                                                               ; RisingEdgeDetector  ; work         ;
 ;       |Flash:fla_80|                         ; 414 (3)             ; 26 (1)                    ; 0                 ; 0          ; 0    ; 0            ; |Watch|Clock:clock|Flash:fla_80                                                                                                 ; Flash               ; work         ;
@@ -328,17 +354,17 @@ https://fpgasoftware.intel.com/eula.
 ;          |Counter:divider1|                  ; 27 (27)             ; 26 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |Watch|CountdownTimer:cdt|PressHold:pl|Counter:divider1                                                                         ; Counter             ; work         ;
 ;          |Counter:divider2|                  ; 30 (30)             ; 23 (23)                   ; 0                 ; 0          ; 0    ; 0            ; |Watch|CountdownTimer:cdt|PressHold:pl|Counter:divider2                                                                         ; Counter             ; work         ;
 ;       |RisingEdgeDetector:red|               ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|CountdownTimer:cdt|RisingEdgeDetector:red                                                                                ; RisingEdgeDetector  ; work         ;
-;    |DisplayHMS:disHMS|                       ; 295 (3)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS                                                                                                        ; DisplayHMS          ; work         ;
-;       |SSeg:ss0|                             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|SSeg:ss0                                                                                               ; SSeg                ; work         ;
-;       |SSeg:ss1|                             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|SSeg:ss1                                                                                               ; SSeg                ; work         ;
-;       |SSeg:ss2|                             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|SSeg:ss2                                                                                               ; SSeg                ; work         ;
-;       |SSeg:ss3|                             ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|SSeg:ss3                                                                                               ; SSeg                ; work         ;
+;    |DisplayHMS:disHMS|                       ; 321 (3)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS                                                                                                        ; DisplayHMS          ; work         ;
+;       |SSeg:ss0|                             ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|SSeg:ss0                                                                                               ; SSeg                ; work         ;
+;       |SSeg:ss1|                             ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|SSeg:ss1                                                                                               ; SSeg                ; work         ;
+;       |SSeg:ss2|                             ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|SSeg:ss2                                                                                               ; SSeg                ; work         ;
+;       |SSeg:ss3|                             ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|SSeg:ss3                                                                                               ; SSeg                ; work         ;
 ;       |SSeg:ss4|                             ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|SSeg:ss4                                                                                               ; SSeg                ; work         ;
 ;       |SSeg:ss5|                             ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|SSeg:ss5                                                                                               ; SSeg                ; work         ;
-;       |lpm_divide:Div0|                      ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Div0                                                                                        ; lpm_divide          ; work         ;
-;          |lpm_divide_4am:auto_generated|     ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Div0|lpm_divide_4am:auto_generated                                                          ; lpm_divide_4am      ; work         ;
-;             |sign_div_unsign_akh:divider|    ; 38 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Div0|lpm_divide_4am:auto_generated|sign_div_unsign_akh:divider                              ; sign_div_unsign_akh ; work         ;
-;                |alt_u_div_qse:divider|       ; 38 (38)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Div0|lpm_divide_4am:auto_generated|sign_div_unsign_akh:divider|alt_u_div_qse:divider        ; alt_u_div_qse       ; work         ;
+;       |lpm_divide:Div0|                      ; 37 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Div0                                                                                        ; lpm_divide          ; work         ;
+;          |lpm_divide_4am:auto_generated|     ; 37 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Div0|lpm_divide_4am:auto_generated                                                          ; lpm_divide_4am      ; work         ;
+;             |sign_div_unsign_akh:divider|    ; 37 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Div0|lpm_divide_4am:auto_generated|sign_div_unsign_akh:divider                              ; sign_div_unsign_akh ; work         ;
+;                |alt_u_div_qse:divider|       ; 37 (37)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Div0|lpm_divide_4am:auto_generated|sign_div_unsign_akh:divider|alt_u_div_qse:divider        ; alt_u_div_qse       ; work         ;
 ;       |lpm_divide:Div1|                      ; 37 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Div1                                                                                        ; lpm_divide          ; work         ;
 ;          |lpm_divide_4am:auto_generated|     ; 37 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Div1|lpm_divide_4am:auto_generated                                                          ; lpm_divide_4am      ; work         ;
 ;             |sign_div_unsign_akh:divider|    ; 37 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Div1|lpm_divide_4am:auto_generated|sign_div_unsign_akh:divider                              ; sign_div_unsign_akh ; work         ;
@@ -347,10 +373,10 @@ https://fpgasoftware.intel.com/eula.
 ;          |lpm_divide_4am:auto_generated|     ; 37 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Div2|lpm_divide_4am:auto_generated                                                          ; lpm_divide_4am      ; work         ;
 ;             |sign_div_unsign_akh:divider|    ; 37 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Div2|lpm_divide_4am:auto_generated|sign_div_unsign_akh:divider                              ; sign_div_unsign_akh ; work         ;
 ;                |alt_u_div_qse:divider|       ; 37 (37)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Div2|lpm_divide_4am:auto_generated|sign_div_unsign_akh:divider|alt_u_div_qse:divider        ; alt_u_div_qse       ; work         ;
-;       |lpm_divide:Mod0|                      ; 42 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Mod0                                                                                        ; lpm_divide          ; work         ;
-;          |lpm_divide_72m:auto_generated|     ; 42 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Mod0|lpm_divide_72m:auto_generated                                                          ; lpm_divide_72m      ; work         ;
-;             |sign_div_unsign_akh:divider|    ; 42 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Mod0|lpm_divide_72m:auto_generated|sign_div_unsign_akh:divider                              ; sign_div_unsign_akh ; work         ;
-;                |alt_u_div_qse:divider|       ; 42 (42)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Mod0|lpm_divide_72m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_qse:divider        ; alt_u_div_qse       ; work         ;
+;       |lpm_divide:Mod0|                      ; 41 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Mod0                                                                                        ; lpm_divide          ; work         ;
+;          |lpm_divide_72m:auto_generated|     ; 41 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Mod0|lpm_divide_72m:auto_generated                                                          ; lpm_divide_72m      ; work         ;
+;             |sign_div_unsign_akh:divider|    ; 41 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Mod0|lpm_divide_72m:auto_generated|sign_div_unsign_akh:divider                              ; sign_div_unsign_akh ; work         ;
+;                |alt_u_div_qse:divider|       ; 41 (41)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Mod0|lpm_divide_72m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_qse:divider        ; alt_u_div_qse       ; work         ;
 ;       |lpm_divide:Mod1|                      ; 41 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Mod1                                                                                        ; lpm_divide          ; work         ;
 ;          |lpm_divide_72m:auto_generated|     ; 41 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Mod1|lpm_divide_72m:auto_generated                                                          ; lpm_divide_72m      ; work         ;
 ;             |sign_div_unsign_akh:divider|    ; 41 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Mod1|lpm_divide_72m:auto_generated|sign_div_unsign_akh:divider                              ; sign_div_unsign_akh ; work         ;
@@ -359,15 +385,19 @@ https://fpgasoftware.intel.com/eula.
 ;          |lpm_divide_72m:auto_generated|     ; 41 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Mod2|lpm_divide_72m:auto_generated                                                          ; lpm_divide_72m      ; work         ;
 ;             |sign_div_unsign_akh:divider|    ; 41 (0)              ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Mod2|lpm_divide_72m:auto_generated|sign_div_unsign_akh:divider                              ; sign_div_unsign_akh ; work         ;
 ;                |alt_u_div_qse:divider|       ; 41 (41)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|DisplayHMS:disHMS|lpm_divide:Mod2|lpm_divide_72m:auto_generated|sign_div_unsign_akh:divider|alt_u_div_qse:divider        ; alt_u_div_qse       ; work         ;
-;    |Flash:BreathLED|                         ; 159 (1)             ; 20 (1)                    ; 0                 ; 0          ; 0    ; 0            ; |Watch|Flash:BreathLED                                                                                                          ; Flash               ; work         ;
-;       |Counter:editpress|                    ; 24 (24)             ; 19 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |Watch|Flash:BreathLED|Counter:editpress                                                                                        ; Counter             ; work         ;
-;       |lpm_divide:Div0|                      ; 134 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|Flash:BreathLED|lpm_divide:Div0                                                                                          ; lpm_divide          ; work         ;
-;          |lpm_divide_adm:auto_generated|     ; 134 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|Flash:BreathLED|lpm_divide:Div0|lpm_divide_adm:auto_generated                                                            ; lpm_divide_adm      ; work         ;
-;             |sign_div_unsign_gnh:divider|    ; 134 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|Flash:BreathLED|lpm_divide:Div0|lpm_divide_adm:auto_generated|sign_div_unsign_gnh:divider                                ; sign_div_unsign_gnh ; work         ;
-;                |alt_u_div_63f:divider|       ; 134 (134)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|Flash:BreathLED|lpm_divide:Div0|lpm_divide_adm:auto_generated|sign_div_unsign_gnh:divider|alt_u_div_63f:divider          ; alt_u_div_63f       ; work         ;
-;    |Mode:modek3|                             ; 4 (2)               ; 5 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|Mode:modek3                                                                                                              ; Mode                ; work         ;
+;    |Game:comb_25|                            ; 53 (11)             ; 30 (3)                    ; 0                 ; 0          ; 0    ; 0            ; |Watch|Game:comb_25                                                                                                             ; Game                ; work         ;
+;       |Counter:cn0|                          ; 11 (11)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|Game:comb_25|Counter:cn0                                                                                                 ; Counter             ; work         ;
+;       |Counter:cn1|                          ; 11 (11)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|Game:comb_25|Counter:cn1                                                                                                 ; Counter             ; work         ;
+;       |Counter:cn2|                          ; 11 (11)             ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|Game:comb_25|Counter:cn2                                                                                                 ; Counter             ; work         ;
+;       |Random:random|                        ; 6 (3)               ; 3 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|Game:comb_25|Random:random                                                                                               ; Random              ; work         ;
+;          |Counter:sd|                        ; 2 (2)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|Game:comb_25|Random:random|Counter:sd                                                                                    ; Counter             ; work         ;
+;          |RisingEdgeDetector:red|            ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|Game:comb_25|Random:random|RisingEdgeDetector:red                                                                        ; RisingEdgeDetector  ; work         ;
+;       |RisingEdgeDetector:red0|              ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|Game:comb_25|RisingEdgeDetector:red0                                                                                     ; RisingEdgeDetector  ; work         ;
+;       |RisingEdgeDetector:red1|              ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|Game:comb_25|RisingEdgeDetector:red1                                                                                     ; RisingEdgeDetector  ; work         ;
+;       |RisingEdgeDetector:red2|              ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|Game:comb_25|RisingEdgeDetector:red2                                                                                     ; RisingEdgeDetector  ; work         ;
+;    |Mode:modek3|                             ; 6 (4)               ; 5 (4)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|Mode:modek3                                                                                                              ; Mode                ; work         ;
 ;       |RisingEdgeDetector:editclick|         ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|Mode:modek3|RisingEdgeDetector:editclick                                                                                 ; RisingEdgeDetector  ; work         ;
-;    |Mux:mux|                                 ; 17 (17)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|Mux:mux                                                                                                                  ; Mux                 ; work         ;
+;    |Mux:mux|                                 ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|Mux:mux                                                                                                                  ; Mux                 ; work         ;
 ;    |StopWatch:stw|                           ; 56 (2)              ; 41 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Watch|StopWatch:stw                                                                                                            ; StopWatch           ; work         ;
 ;       |RisingEdgeDetector:editclick|         ; 1 (1)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|StopWatch:stw|RisingEdgeDetector:editclick                                                                               ; RisingEdgeDetector  ; work         ;
 ;       |StopWatchMode:swm|                    ; 1 (1)               ; 2 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |Watch|StopWatch:stw|StopWatchMode:swm                                                                                          ; StopWatchMode       ; work         ;
@@ -394,6 +424,18 @@ Encoding Type:  One-Hot
 +----------+----------+----------+----------+----------+
 
 
++-------------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                                 ;
++----------------------------------------------------+-------------------------------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal                                   ; Free of Timing Hazards ;
++----------------------------------------------------+-------------------------------------------------------+------------------------+
+; Game:comb_25|Random:random|randi[1]                ; Game:comb_25|Random:random|RisingEdgeDetector:red|out ; yes                    ;
+; Game:comb_25|Random:random|randi[0]                ; Game:comb_25|Random:random|RisingEdgeDetector:red|out ; yes                    ;
+; Number of user-specified and inferred latches = 2  ;                                                       ;                        ;
++----------------------------------------------------+-------------------------------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
 +------------------------------------------------------------+
 ; Registers Removed During Synthesis                         ;
 +---------------------------------------+--------------------+
@@ -410,12 +452,12 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 366   ;
-; Number of registers using Synchronous Clear  ; 305   ;
+; Total registers                              ; 404   ;
+; Number of registers using Synchronous Clear  ; 333   ;
 ; Number of registers using Synchronous Load   ; 29    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 172   ;
+; Number of registers using Clock Enable       ; 174   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -425,52 +467,56 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                         ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |Watch|Clock:clock|PressHold:mi|Counter:divider1|cnt[21]           ;
-; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |Watch|Clock:clock|PressHold:mi|Counter:divider2|cnt[12]           ;
-; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |Watch|Clock:clock|PressHold:pl|Counter:divider1|cnt[11]           ;
-; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |Watch|Clock:clock|PressHold:pl|Counter:divider2|cnt[12]           ;
-; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |Watch|Clock:clock|Time:t|Counter:divider|cnt[5]                   ;
-; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |Watch|CountdownTimer:cdt|PressHold:pl|Counter:divider1|cnt[6]     ;
-; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |Watch|CountdownTimer:cdt|PressHold:pl|Counter:divider2|cnt[19]    ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |Watch|CountdownTimer:cdt|PressHold:pl|Counter:divider1|cnt[3]     ;
+; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |Watch|CountdownTimer:cdt|PressHold:pl|Counter:divider2|cnt[8]     ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |Watch|Clock:clock|PressHold:mi|Counter:divider1|cnt[8]            ;
+; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |Watch|Clock:clock|PressHold:mi|Counter:divider2|cnt[14]           ;
+; 3:1                ; 25 bits   ; 50 LEs        ; 0 LEs                ; 50 LEs                 ; Yes        ; |Watch|Clock:clock|PressHold:pl|Counter:divider1|cnt[13]           ;
+; 3:1                ; 23 bits   ; 46 LEs        ; 0 LEs                ; 46 LEs                 ; Yes        ; |Watch|Clock:clock|PressHold:pl|Counter:divider2|cnt[4]            ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |Watch|Clock:clock|Time:t|Counter:divider|cnt[24]                  ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |Watch|Game:comb_25|Counter:cn2|cnt[1]                             ;
 ; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |Watch|StopWatch:stw|StopWatchTime:swt|Counter:ch|cnt[5]           ;
-; 4:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |Watch|Clock:clock|ClockMode:keymod2|Counter:editpress|cnt[25]     ;
-; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |Watch|StopWatch:stw|StopWatchTime:swt|Counter:cm|cnt[2]           ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |Watch|StopWatch:stw|StopWatchTime:swt|Counter:cs|cnt[3]           ;
-; 4:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |Watch|StopWatch:stw|StopWatchTime:swt|Counter:divider|cnt[16]     ;
-; 4:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |Watch|CountdownTimer:cdt|CountdownTime:cdt|Counter:divider|cnt[5] ;
-; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Watch|Clock:clock|Time:t|Counter:ch|cnt[0]                        ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |Watch|Clock:clock|ClockMode:keymod2|Counter:editpress|cnt[18]     ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |Watch|Game:comb_25|Counter:cn1|cnt[1]                             ;
+; 4:1                ; 6 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; Yes        ; |Watch|StopWatch:stw|StopWatchTime:swt|Counter:cm|cnt[0]           ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |Watch|Game:comb_25|Counter:cn0|cnt[0]                             ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |Watch|StopWatch:stw|StopWatchTime:swt|Counter:cs|cnt[0]           ;
+; 4:1                ; 19 bits   ; 38 LEs        ; 0 LEs                ; 38 LEs                 ; Yes        ; |Watch|StopWatch:stw|StopWatchTime:swt|Counter:divider|cnt[11]     ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 0 LEs                ; 52 LEs                 ; Yes        ; |Watch|CountdownTimer:cdt|CountdownTime:cdt|Counter:divider|cnt[0] ;
+; 6:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Watch|Clock:clock|Time:t|Counter:ch|cnt[1]                        ;
 ; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Watch|Clock:clock|Time:t|Counter:cm|cnt[5]                        ;
-; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Watch|Clock:clock|Time:t|Counter:cs|cnt[4]                        ;
-; 7:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Watch|CountdownTimer:cdt|CountdownTime:cdt|Counter:ch|cnt[0]      ;
-; 7:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Watch|CountdownTimer:cdt|CountdownTime:cdt|Counter:cm|cnt[4]      ;
-; 7:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Watch|CountdownTimer:cdt|CountdownTime:cdt|Counter:cs|cnt[3]      ;
+; 6:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Watch|Clock:clock|Time:t|Counter:cs|cnt[5]                        ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |Watch|CountdownTimer:cdt|CountdownTime:cdt|Counter:ch|cnt[3]      ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Watch|CountdownTimer:cdt|CountdownTime:cdt|Counter:cm|cnt[0]      ;
+; 7:1                ; 6 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |Watch|CountdownTimer:cdt|CountdownTime:cdt|Counter:cs|cnt[4]      ;
 ; 1:1                ; 5 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |Watch|Clock:clock|Time:t|Counter:ch|Add1                          ;
 ; 1:1                ; 6 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |Watch|Clock:clock|Time:t|Counter:cm|Add1                          ;
 ; 1:1                ; 6 bits    ; 0 LEs         ; 0 LEs                ; 0 LEs                  ; No         ; |Watch|Clock:clock|Time:t|Counter:cs|Add1                          ;
-; 4:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; No         ; |Watch|Mux:mux|Mux20                                               ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Watch|Mux:mux|Mux15                                               ;
+; 4:1                ; 17 bits   ; 34 LEs        ; 34 LEs               ; 0 LEs                  ; No         ; |Watch|Mux:mux|Mux18                                               ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; No         ; |Watch|Game:comb_25|Mux0                                           ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------+
 
 
-+--------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Flash:BreathLED ;
-+----------------+-------+-------------------------------------+
-; Parameter Name ; Value ; Type                                ;
-+----------------+-------+-------------------------------------+
-; FRE            ; 100   ; Signed Integer                      ;
-; DC             ; 1     ; Signed Integer                      ;
-+----------------+-------+-------------------------------------+
++------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BreathLED:breathled ;
++----------------+-------+-----------------------------------------+
+; Parameter Name ; Value ; Type                                    ;
++----------------+-------+-----------------------------------------+
+; FRE            ; 2     ; Signed Integer                          ;
++----------------+-------+-----------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+--------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Flash:BreathLED|Counter:editpress ;
-+----------------+--------+------------------------------------------------------+
-; Parameter Name ; Value  ; Type                                                 ;
-+----------------+--------+------------------------------------------------------+
-; MAX            ; 499999 ; Signed Integer                                       ;
-; WIDTH          ; 19     ; Signed Integer                                       ;
-; UP             ; 1      ; Unsigned Binary                                      ;
-+----------------+--------+------------------------------------------------------+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: BreathLED:breathled|Counter:editpress ;
++----------------+----------+--------------------------------------------------------+
+; Parameter Name ; Value    ; Type                                                   ;
++----------------+----------+--------------------------------------------------------+
+; MAX            ; 49999999 ; Signed Integer                                         ;
+; WIDTH          ; 26       ; Signed Integer                                         ;
+; UP             ; 1        ; Unsigned Binary                                        ;
++----------------+----------+--------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -758,6 +804,65 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Game:comb_25|Random:random ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; MIN            ; 1     ; Signed Integer                                 ;
+; MAX            ; 3     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Game:comb_25|Random:random|Counter:sd ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; MAX            ; 2     ; Signed Integer                                            ;
+; WIDTH          ; 2     ; Signed Integer                                            ;
+; UP             ; 1     ; Unsigned Binary                                           ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Game:comb_25|Counter:cn0 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; MAX            ; 99    ; Signed Integer                               ;
+; WIDTH          ; 7     ; Signed Integer                               ;
+; UP             ; 1     ; Unsigned Binary                              ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Game:comb_25|Counter:cn1 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; MAX            ; 99    ; Signed Integer                               ;
+; WIDTH          ; 7     ; Signed Integer                               ;
+; UP             ; 1     ; Unsigned Binary                              ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Game:comb_25|Counter:cn2 ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; MAX            ; 99    ; Signed Integer                               ;
+; WIDTH          ; 7     ; Signed Integer                               ;
+; UP             ; 1     ; Unsigned Binary                              ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +------------------------------------------------------------------------------------+
 ; Parameter Settings for Inferred Entity Instance: DisplayHMS:disHMS|lpm_divide:Div2 ;
 +------------------------+----------------+------------------------------------------+
@@ -919,27 +1024,101 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
-+----------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: Flash:BreathLED|lpm_divide:Div0 ;
-+------------------------+----------------+----------------------------------------+
-; Parameter Name         ; Value          ; Type                                   ;
-+------------------------+----------------+----------------------------------------+
-; LPM_WIDTHN             ; 19             ; Untyped                                ;
-; LPM_WIDTHD             ; 16             ; Untyped                                ;
-; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                ;
-; LPM_PIPELINE           ; 0              ; Untyped                                ;
-; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                ;
-; MAXIMIZE_SPEED         ; 5              ; Untyped                                ;
-; CBXI_PARAMETER         ; lpm_divide_adm ; Untyped                                ;
-; CARRY_CHAIN            ; MANUAL         ; Untyped                                ;
-; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                ;
-; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                             ;
-; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                           ;
-; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                           ;
-; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                         ;
-+------------------------+----------------+----------------------------------------+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: BreathLED:breathled|lpm_divide:Div0 ;
++------------------------+----------------+--------------------------------------------+
+; Parameter Name         ; Value          ; Type                                       ;
++------------------------+----------------+--------------------------------------------+
+; LPM_WIDTHN             ; 26             ; Untyped                                    ;
+; LPM_WIDTHD             ; 16             ; Untyped                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_8dm ; Untyped                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
++------------------------+----------------+--------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: BreathLED:breathled|lpm_divide:Mod0 ;
++------------------------+----------------+--------------------------------------------+
+; Parameter Name         ; Value          ; Type                                       ;
++------------------------+----------------+--------------------------------------------+
+; LPM_WIDTHN             ; 26             ; Untyped                                    ;
+; LPM_WIDTHD             ; 10             ; Untyped                                    ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                    ;
+; LPM_PIPELINE           ; 0              ; Untyped                                    ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                    ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                    ;
+; CBXI_PARAMETER         ; lpm_divide_55m ; Untyped                                    ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                    ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                    ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                 ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                               ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                               ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                             ;
++------------------------+----------------+--------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "Game:comb_25|Counter:cn2" ;
++--------+-------+----------+--------------------------+
+; Port   ; Type  ; Severity ; Details                  ;
++--------+-------+----------+--------------------------+
+; enable ; Input ; Info     ; Stuck at GND             ;
+; minus  ; Input ; Info     ; Stuck at GND             ;
++--------+-------+----------+--------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "Game:comb_25|Counter:cn1" ;
++--------+-------+----------+--------------------------+
+; Port   ; Type  ; Severity ; Details                  ;
++--------+-------+----------+--------------------------+
+; enable ; Input ; Info     ; Stuck at GND             ;
+; minus  ; Input ; Info     ; Stuck at GND             ;
++--------+-------+----------+--------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "Game:comb_25|Counter:cn0" ;
++--------+-------+----------+--------------------------+
+; Port   ; Type  ; Severity ; Details                  ;
++--------+-------+----------+--------------------------+
+; enable ; Input ; Info     ; Stuck at GND             ;
+; minus  ; Input ; Info     ; Stuck at GND             ;
++--------+-------+----------+--------------------------+
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "Game:comb_25|Random:random|Counter:sd" ;
++--------+-------+----------+---------------------------------------+
+; Port   ; Type  ; Severity ; Details                               ;
++--------+-------+----------+---------------------------------------+
+; enable ; Input ; Info     ; Stuck at VCC                          ;
+; reset  ; Input ; Info     ; Stuck at GND                          ;
+; plus   ; Input ; Info     ; Stuck at GND                          ;
+; minus  ; Input ; Info     ; Stuck at GND                          ;
++--------+-------+----------+---------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Game:comb_25|Random:random"                                                                                                 ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                    ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
+; randi ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (2 bits) it drives; bit(s) "randi[31..2]" have no fanouts ;
++-------+--------+----------+----------------------------------------------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1153,23 +1332,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------+
-; Port Connectivity Checks: "Flash:BreathLED|Counter:editpress" ;
-+-------+-------+----------+------------------------------------+
-; Port  ; Type  ; Severity ; Details                            ;
-+-------+-------+----------+------------------------------------+
-; plus  ; Input ; Info     ; Stuck at GND                       ;
-; minus ; Input ; Info     ; Stuck at GND                       ;
-+-------+-------+----------+------------------------------------+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "BreathLED:breathled|Counter:editpress" ;
++-------+-------+----------+----------------------------------------+
+; Port  ; Type  ; Severity ; Details                                ;
++-------+-------+----------+----------------------------------------+
+; plus  ; Input ; Info     ; Stuck at GND                           ;
+; minus ; Input ; Info     ; Stuck at GND                           ;
++-------+-------+----------+----------------------------------------+
 
 
-+---------------------------------------------+
-; Port Connectivity Checks: "Flash:BreathLED" ;
-+-------+-------+----------+------------------+
-; Port  ; Type  ; Severity ; Details          ;
-+-------+-------+----------+------------------+
-; reset ; Input ; Info     ; Stuck at GND     ;
-+-------+-------+----------+------------------+
++-------------------------------------------------+
+; Port Connectivity Checks: "BreathLED:breathled" ;
++--------+-------+----------+---------------------+
+; Port   ; Type  ; Severity ; Details             ;
++--------+-------+----------+---------------------+
+; enable ; Input ; Info     ; Stuck at VCC        ;
+; reset  ; Input ; Info     ; Stuck at GND        ;
++--------+-------+----------+---------------------+
 
 
 +-----------------------------------------------------+
@@ -1177,36 +1357,38 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 366                         ;
+; arriav_ff             ; 404                         ;
 ;     ENA               ; 21                          ;
-;     ENA SCLR          ; 122                         ;
+;     ENA SCLR          ; 124                         ;
 ;     ENA SCLR SLD      ; 12                          ;
 ;     ENA SLD           ; 17                          ;
-;     SCLR              ; 171                         ;
-;     plain             ; 23                          ;
-; arriav_lcell_comb     ; 1358                        ;
-;     arith             ; 712                         ;
-;         0 data inputs ; 76                          ;
-;         1 data inputs ; 343                         ;
-;         2 data inputs ; 35                          ;
-;         3 data inputs ; 155                         ;
-;         4 data inputs ; 89                          ;
+;     SCLR              ; 197                         ;
+;     plain             ; 33                          ;
+; arriav_lcell_comb     ; 2177                        ;
+;     arith             ; 1045                        ;
+;         0 data inputs ; 106                         ;
+;         1 data inputs ; 382                         ;
+;         2 data inputs ; 32                          ;
+;         3 data inputs ; 311                         ;
+;         4 data inputs ; 200                         ;
 ;         5 data inputs ; 14                          ;
-;     normal            ; 612                         ;
+;     normal            ; 1057                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 5                           ;
-;         2 data inputs ; 244                         ;
-;         3 data inputs ; 75                          ;
-;         4 data inputs ; 95                          ;
-;         5 data inputs ; 87                          ;
-;         6 data inputs ; 105                         ;
-;     shared            ; 34                          ;
-;         0 data inputs ; 2                           ;
-;         1 data inputs ; 32                          ;
+;         2 data inputs ; 514                         ;
+;         3 data inputs ; 126                         ;
+;         4 data inputs ; 217                         ;
+;         5 data inputs ; 73                          ;
+;         6 data inputs ; 121                         ;
+;     shared            ; 75                          ;
+;         0 data inputs ; 9                           ;
+;         1 data inputs ; 58                          ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 4                           ;
 ; boundary_port         ; 57                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 27.90                       ;
-; Average LUT depth     ; 10.26                       ;
+; Max LUT depth         ; 38.90                       ;
+; Average LUT depth     ; 19.02                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1215,7 +1397,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -1225,14 +1407,15 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
-    Info: Processing started: Tue May 14 19:11:34 2024
+    Info: Processing started: Thu May 16 22:28:44 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Watch -c Watch
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file 7seg.v
     Info (12023): Found entity 1: SSeg File: D:/Verilog/Watch/7Seg.v Line: 2
-Info (12021): Found 1 design units, including 1 entities, in source file flash.v
+Info (12021): Found 2 design units, including 2 entities, in source file flash.v
     Info (12023): Found entity 1: Flash File: D:/Verilog/Watch/Flash.v Line: 3
+    Info (12023): Found entity 2: BreathLED File: D:/Verilog/Watch/Flash.v Line: 26
 Info (12021): Found 1 design units, including 1 entities, in source file display.v
     Info (12023): Found entity 1: DisplayHMS File: D:/Verilog/Watch/Display.v Line: 2
 Info (12021): Found 7 design units, including 7 entities, in source file buttoncontrol.v
@@ -1248,56 +1431,98 @@ Info (12021): Found 4 design units, including 4 entities, in source file time.v
     Info (12023): Found entity 2: StopWatchTime File: D:/Verilog/Watch/Time.v Line: 24
     Info (12023): Found entity 3: CountdownTime File: D:/Verilog/Watch/Time.v Line: 46
     Info (12023): Found entity 4: Counter File: D:/Verilog/Watch/Time.v Line: 67
-Warning (12090): Entity "Mux" obtained from "Watch.v" instead of from Quartus Prime megafunction library File: D:/Verilog/Watch/Watch.v Line: 57
-Info (12021): Found 5 design units, including 5 entities, in source file watch.v
+Warning (12090): Entity "Mux" obtained from "Watch.v" instead of from Quartus Prime megafunction library File: D:/Verilog/Watch/Watch.v Line: 68
+Info (12021): Found 6 design units, including 6 entities, in source file watch.v
     Info (12023): Found entity 1: Watch File: D:/Verilog/Watch/Watch.v Line: 2
-    Info (12023): Found entity 2: Mux File: D:/Verilog/Watch/Watch.v Line: 57
-    Info (12023): Found entity 3: Clock File: D:/Verilog/Watch/Watch.v Line: 87
-    Info (12023): Found entity 4: StopWatch File: D:/Verilog/Watch/Watch.v Line: 116
-    Info (12023): Found entity 5: CountdownTimer File: D:/Verilog/Watch/Watch.v Line: 133
+    Info (12023): Found entity 2: Mux File: D:/Verilog/Watch/Watch.v Line: 68
+    Info (12023): Found entity 3: Clock File: D:/Verilog/Watch/Watch.v Line: 104
+    Info (12023): Found entity 4: StopWatch File: D:/Verilog/Watch/Watch.v Line: 133
+    Info (12023): Found entity 5: CountdownTimer File: D:/Verilog/Watch/Watch.v Line: 150
+    Info (12023): Found entity 6: Game File: D:/Verilog/Watch/Watch.v Line: 175
+Info (12021): Found 1 design units, including 1 entities, in source file random.v
+    Info (12023): Found entity 1: Random File: D:/Verilog/Watch/Random.v Line: 2
+Critical Warning (10846): Verilog HDL Instantiation warning at Watch.v(57): instance has no name File: D:/Verilog/Watch/Watch.v Line: 57
 Info (12127): Elaborating entity "Watch" for the top level hierarchy
-Warning (10034): Output port "LEDR[4..1]" at Watch.v(6) has no driver File: D:/Verilog/Watch/Watch.v Line: 6
-Info (12128): Elaborating entity "Flash" for hierarchy "Flash:BreathLED" File: D:/Verilog/Watch/Watch.v Line: 27
-Warning (10230): Verilog HDL assignment warning at Flash.v(17): truncated value with size 32 to match size of target (10) File: D:/Verilog/Watch/Flash.v Line: 17
-Info (12128): Elaborating entity "Counter" for hierarchy "Flash:BreathLED|Counter:editpress" File: D:/Verilog/Watch/Flash.v Line: 14
-Warning (10230): Verilog HDL assignment warning at Time.v(92): truncated value with size 32 to match size of target (19) File: D:/Verilog/Watch/Time.v Line: 92
-Info (12128): Elaborating entity "Mux" for hierarchy "Mux:mux" File: D:/Verilog/Watch/Watch.v Line: 34
-Info (12128): Elaborating entity "Mode" for hierarchy "Mode:modek3" File: D:/Verilog/Watch/Watch.v Line: 37
+Info (12128): Elaborating entity "BreathLED" for hierarchy "BreathLED:breathled" File: D:/Verilog/Watch/Watch.v Line: 29
+Warning (10230): Verilog HDL assignment warning at Flash.v(41): truncated value with size 32 to match size of target (10) File: D:/Verilog/Watch/Flash.v Line: 41
+Warning (10230): Verilog HDL assignment warning at Flash.v(42): truncated value with size 32 to match size of target (10) File: D:/Verilog/Watch/Flash.v Line: 42
+Info (12128): Elaborating entity "Counter" for hierarchy "BreathLED:breathled|Counter:editpress" File: D:/Verilog/Watch/Flash.v Line: 37
+Warning (10230): Verilog HDL assignment warning at Time.v(92): truncated value with size 32 to match size of target (26) File: D:/Verilog/Watch/Time.v Line: 92
+Info (12128): Elaborating entity "Mux" for hierarchy "Mux:mux" File: D:/Verilog/Watch/Watch.v Line: 38
+Info (12128): Elaborating entity "Mode" for hierarchy "Mode:modek3" File: D:/Verilog/Watch/Watch.v Line: 41
 Info (12128): Elaborating entity "RisingEdgeDetector" for hierarchy "Mode:modek3|RisingEdgeDetector:editclick" File: D:/Verilog/Watch/ButtonControl.v Line: 174
-Info (12128): Elaborating entity "Clock" for hierarchy "Clock:clock" File: D:/Verilog/Watch/Watch.v Line: 41
-Info (12128): Elaborating entity "PressHold" for hierarchy "Clock:clock|PressHold:pl" File: D:/Verilog/Watch/Watch.v Line: 100
+Info (12128): Elaborating entity "Clock" for hierarchy "Clock:clock" File: D:/Verilog/Watch/Watch.v Line: 45
+Info (12128): Elaborating entity "PressHold" for hierarchy "Clock:clock|PressHold:pl" File: D:/Verilog/Watch/Watch.v Line: 117
 Info (12128): Elaborating entity "Counter" for hierarchy "Clock:clock|PressHold:pl|Counter:divider1" File: D:/Verilog/Watch/ButtonControl.v Line: 36
 Warning (10230): Verilog HDL assignment warning at Time.v(92): truncated value with size 32 to match size of target (25) File: D:/Verilog/Watch/Time.v Line: 92
 Info (12128): Elaborating entity "Counter" for hierarchy "Clock:clock|PressHold:pl|Counter:divider2" File: D:/Verilog/Watch/ButtonControl.v Line: 40
 Warning (10230): Verilog HDL assignment warning at Time.v(92): truncated value with size 32 to match size of target (23) File: D:/Verilog/Watch/Time.v Line: 92
-Info (12128): Elaborating entity "ClockMode" for hierarchy "Clock:clock|ClockMode:keymod2" File: D:/Verilog/Watch/Watch.v Line: 102
+Info (12128): Elaborating entity "ClockMode" for hierarchy "Clock:clock|ClockMode:keymod2" File: D:/Verilog/Watch/Watch.v Line: 119
 Warning (10230): Verilog HDL assignment warning at ButtonControl.v(99): truncated value with size 32 to match size of target (2) File: D:/Verilog/Watch/ButtonControl.v Line: 99
-Info (12128): Elaborating entity "Counter" for hierarchy "Clock:clock|ClockMode:keymod2|Counter:editpress" File: D:/Verilog/Watch/ButtonControl.v Line: 77
-Warning (10230): Verilog HDL assignment warning at Time.v(92): truncated value with size 32 to match size of target (26) File: D:/Verilog/Watch/Time.v Line: 92
-Info (12128): Elaborating entity "Time" for hierarchy "Clock:clock|Time:t" File: D:/Verilog/Watch/Watch.v Line: 106
+Info (12128): Elaborating entity "Time" for hierarchy "Clock:clock|Time:t" File: D:/Verilog/Watch/Watch.v Line: 123
 Info (12128): Elaborating entity "Counter" for hierarchy "Clock:clock|Time:t|Counter:cs" File: D:/Verilog/Watch/Time.v Line: 14
 Warning (10230): Verilog HDL assignment warning at Time.v(92): truncated value with size 32 to match size of target (6) File: D:/Verilog/Watch/Time.v Line: 92
 Info (12128): Elaborating entity "Counter" for hierarchy "Clock:clock|Time:t|Counter:ch" File: D:/Verilog/Watch/Time.v Line: 20
 Warning (10230): Verilog HDL assignment warning at Time.v(92): truncated value with size 32 to match size of target (5) File: D:/Verilog/Watch/Time.v Line: 92
-Info (12128): Elaborating entity "Flash" for hierarchy "Clock:clock|Flash:fla_80" File: D:/Verilog/Watch/Watch.v Line: 110
+Info (12128): Elaborating entity "Flash" for hierarchy "Clock:clock|Flash:fla_80" File: D:/Verilog/Watch/Watch.v Line: 127
 Warning (10230): Verilog HDL assignment warning at Flash.v(17): truncated value with size 32 to match size of target (10) File: D:/Verilog/Watch/Flash.v Line: 17
-Info (12128): Elaborating entity "StopWatch" for hierarchy "StopWatch:stw" File: D:/Verilog/Watch/Watch.v Line: 44
-Info (12128): Elaborating entity "StopWatchMode" for hierarchy "StopWatch:stw|StopWatchMode:swm" File: D:/Verilog/Watch/Watch.v Line: 125
-Info (12128): Elaborating entity "StopWatchTime" for hierarchy "StopWatch:stw|StopWatchTime:swt" File: D:/Verilog/Watch/Watch.v Line: 129
+Info (12128): Elaborating entity "StopWatch" for hierarchy "StopWatch:stw" File: D:/Verilog/Watch/Watch.v Line: 48
+Info (12128): Elaborating entity "StopWatchMode" for hierarchy "StopWatch:stw|StopWatchMode:swm" File: D:/Verilog/Watch/Watch.v Line: 142
+Info (12128): Elaborating entity "StopWatchTime" for hierarchy "StopWatch:stw|StopWatchTime:swt" File: D:/Verilog/Watch/Watch.v Line: 146
+Info (12128): Elaborating entity "Counter" for hierarchy "StopWatch:stw|StopWatchTime:swt|Counter:divider" File: D:/Verilog/Watch/Time.v Line: 33
+Warning (10230): Verilog HDL assignment warning at Time.v(92): truncated value with size 32 to match size of target (19) File: D:/Verilog/Watch/Time.v Line: 92
 Info (12128): Elaborating entity "Counter" for hierarchy "StopWatch:stw|StopWatchTime:swt|Counter:cs" File: D:/Verilog/Watch/Time.v Line: 36
 Warning (10230): Verilog HDL assignment warning at Time.v(92): truncated value with size 32 to match size of target (7) File: D:/Verilog/Watch/Time.v Line: 92
-Info (12128): Elaborating entity "CountdownTimer" for hierarchy "CountdownTimer:cdt" File: D:/Verilog/Watch/Watch.v Line: 48
-Info (12128): Elaborating entity "PressHold" for hierarchy "CountdownTimer:cdt|PressHold:pl" File: D:/Verilog/Watch/Watch.v Line: 145
-Info (12128): Elaborating entity "CountdownMode" for hierarchy "CountdownTimer:cdt|CountdownMode:cdmk0" File: D:/Verilog/Watch/Watch.v Line: 148
-Info (12128): Elaborating entity "Buzzer" for hierarchy "CountdownTimer:cdt|Buzzer:buz" File: D:/Verilog/Watch/Watch.v Line: 150
-Info (12128): Elaborating entity "CountdownTime" for hierarchy "CountdownTimer:cdt|CountdownTime:cdt" File: D:/Verilog/Watch/Watch.v Line: 154
+Info (12128): Elaborating entity "CountdownTimer" for hierarchy "CountdownTimer:cdt" File: D:/Verilog/Watch/Watch.v Line: 52
+Info (12128): Elaborating entity "PressHold" for hierarchy "CountdownTimer:cdt|PressHold:pl" File: D:/Verilog/Watch/Watch.v Line: 162
+Info (12128): Elaborating entity "CountdownMode" for hierarchy "CountdownTimer:cdt|CountdownMode:cdmk0" File: D:/Verilog/Watch/Watch.v Line: 165
+Info (12128): Elaborating entity "Buzzer" for hierarchy "CountdownTimer:cdt|Buzzer:buz" File: D:/Verilog/Watch/Watch.v Line: 167
+Info (12128): Elaborating entity "CountdownTime" for hierarchy "CountdownTimer:cdt|CountdownTime:cdt" File: D:/Verilog/Watch/Watch.v Line: 171
 Info (12128): Elaborating entity "Counter" for hierarchy "CountdownTimer:cdt|CountdownTime:cdt|Counter:cs" File: D:/Verilog/Watch/Time.v Line: 57
 Warning (10230): Verilog HDL assignment warning at Time.v(88): truncated value with size 32 to match size of target (6) File: D:/Verilog/Watch/Time.v Line: 88
 Warning (10230): Verilog HDL assignment warning at Time.v(92): truncated value with size 32 to match size of target (6) File: D:/Verilog/Watch/Time.v Line: 92
 Info (12128): Elaborating entity "Counter" for hierarchy "CountdownTimer:cdt|CountdownTime:cdt|Counter:ch" File: D:/Verilog/Watch/Time.v Line: 63
 Warning (10230): Verilog HDL assignment warning at Time.v(88): truncated value with size 32 to match size of target (5) File: D:/Verilog/Watch/Time.v Line: 88
 Warning (10230): Verilog HDL assignment warning at Time.v(92): truncated value with size 32 to match size of target (5) File: D:/Verilog/Watch/Time.v Line: 92
-Info (12128): Elaborating entity "DisplayHMS" for hierarchy "DisplayHMS:disHMS" File: D:/Verilog/Watch/Watch.v Line: 53
+Info (12128): Elaborating entity "Game" for hierarchy "Game:comb_25" File: D:/Verilog/Watch/Watch.v Line: 57
+Info (10264): Verilog HDL Case Statement information at Watch.v(214): all case item expressions in this case statement are onehot File: D:/Verilog/Watch/Watch.v Line: 214
+Info (12128): Elaborating entity "Random" for hierarchy "Game:comb_25|Random:random" File: D:/Verilog/Watch/Watch.v Line: 189
+Warning (10240): Verilog HDL Always Construct warning at Random.v(15): inferring latch(es) for variable "randi", which holds its previous value in one or more paths through the always construct File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[0]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[1]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[2]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[3]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[4]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[5]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[6]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[7]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[8]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[9]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[10]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[11]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[12]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[13]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[14]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[15]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[16]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[17]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[18]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[19]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[20]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[21]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[22]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[23]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[24]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[25]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[26]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[27]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[28]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[29]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[30]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (10041): Inferred latch for "randi[31]" at Random.v(15) File: D:/Verilog/Watch/Random.v Line: 15
+Info (12128): Elaborating entity "Counter" for hierarchy "Game:comb_25|Random:random|Counter:sd" File: D:/Verilog/Watch/Random.v Line: 12
+Warning (10230): Verilog HDL assignment warning at Time.v(92): truncated value with size 32 to match size of target (2) File: D:/Verilog/Watch/Time.v Line: 92
+Info (12128): Elaborating entity "DisplayHMS" for hierarchy "DisplayHMS:disHMS" File: D:/Verilog/Watch/Watch.v Line: 64
 Warning (10230): Verilog HDL assignment warning at Display.v(15): truncated value with size 7 to match size of target (4) File: D:/Verilog/Watch/Display.v Line: 15
 Warning (10230): Verilog HDL assignment warning at Display.v(16): truncated value with size 7 to match size of target (4) File: D:/Verilog/Watch/Display.v Line: 16
 Warning (10230): Verilog HDL assignment warning at Display.v(17): truncated value with size 7 to match size of target (4) File: D:/Verilog/Watch/Display.v Line: 17
@@ -1305,7 +1530,7 @@ Warning (10230): Verilog HDL assignment warning at Display.v(18): truncated valu
 Warning (10230): Verilog HDL assignment warning at Display.v(19): truncated value with size 7 to match size of target (4) File: D:/Verilog/Watch/Display.v Line: 19
 Warning (10230): Verilog HDL assignment warning at Display.v(20): truncated value with size 7 to match size of target (4) File: D:/Verilog/Watch/Display.v Line: 20
 Info (12128): Elaborating entity "SSeg" for hierarchy "DisplayHMS:disHMS|SSeg:ss0" File: D:/Verilog/Watch/Display.v Line: 22
-Info (278001): Inferred 8 megafunctions from design logic
+Info (278001): Inferred 9 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayHMS:disHMS|Div2" File: D:/Verilog/Watch/Display.v Line: 20
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayHMS:disHMS|Mod2" File: D:/Verilog/Watch/Display.v Line: 19
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayHMS:disHMS|Div1" File: D:/Verilog/Watch/Display.v Line: 18
@@ -1313,7 +1538,8 @@ Info (278001): Inferred 8 megafunctions from design logic
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayHMS:disHMS|Div0" File: D:/Verilog/Watch/Display.v Line: 16
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "DisplayHMS:disHMS|Mod0" File: D:/Verilog/Watch/Display.v Line: 15
     Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Clock:clock|Flash:fla_80|Div0" File: D:/Verilog/Watch/Flash.v Line: 17
-    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Flash:BreathLED|Div0" File: D:/Verilog/Watch/Flash.v Line: 17
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "BreathLED:breathled|Div0" File: D:/Verilog/Watch/Flash.v Line: 41
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "BreathLED:breathled|Mod0" File: D:/Verilog/Watch/Flash.v Line: 42
 Info (12130): Elaborated megafunction instantiation "DisplayHMS:disHMS|lpm_divide:Div2" File: D:/Verilog/Watch/Display.v Line: 20
 Info (12133): Instantiated megafunction "DisplayHMS:disHMS|lpm_divide:Div2" with the following parameter: File: D:/Verilog/Watch/Display.v Line: 20
     Info (12134): Parameter "LPM_WIDTHN" = "7"
@@ -1334,18 +1560,6 @@ Info (12133): Instantiated megafunction "DisplayHMS:disHMS|lpm_divide:Mod2" with
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_72m.tdf
     Info (12023): Found entity 1: lpm_divide_72m File: D:/Verilog/Watch/db/lpm_divide_72m.tdf Line: 25
-Info (12130): Elaborated megafunction instantiation "DisplayHMS:disHMS|lpm_divide:Div0" File: D:/Verilog/Watch/Display.v Line: 16
-Info (12133): Instantiated megafunction "DisplayHMS:disHMS|lpm_divide:Div0" with the following parameter: File: D:/Verilog/Watch/Display.v Line: 16
-    Info (12134): Parameter "LPM_WIDTHN" = "7"
-    Info (12134): Parameter "LPM_WIDTHD" = "4"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12130): Elaborated megafunction instantiation "DisplayHMS:disHMS|lpm_divide:Mod0" File: D:/Verilog/Watch/Display.v Line: 15
-Info (12133): Instantiated megafunction "DisplayHMS:disHMS|lpm_divide:Mod0" with the following parameter: File: D:/Verilog/Watch/Display.v Line: 15
-    Info (12134): Parameter "LPM_WIDTHN" = "7"
-    Info (12134): Parameter "LPM_WIDTHD" = "4"
-    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
 Info (12130): Elaborated megafunction instantiation "Clock:clock|Flash:fla_80|lpm_divide:Div0" File: D:/Verilog/Watch/Flash.v Line: 17
 Info (12133): Instantiated megafunction "Clock:clock|Flash:fla_80|lpm_divide:Div0" with the following parameter: File: D:/Verilog/Watch/Flash.v Line: 17
     Info (12134): Parameter "LPM_WIDTHN" = "25"
@@ -1358,36 +1572,43 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sign
     Info (12023): Found entity 1: sign_div_unsign_dnh File: D:/Verilog/Watch/db/sign_div_unsign_dnh.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_03f.tdf
     Info (12023): Found entity 1: alt_u_div_03f File: D:/Verilog/Watch/db/alt_u_div_03f.tdf Line: 23
-Info (12130): Elaborated megafunction instantiation "Flash:BreathLED|lpm_divide:Div0" File: D:/Verilog/Watch/Flash.v Line: 17
-Info (12133): Instantiated megafunction "Flash:BreathLED|lpm_divide:Div0" with the following parameter: File: D:/Verilog/Watch/Flash.v Line: 17
-    Info (12134): Parameter "LPM_WIDTHN" = "19"
+Info (12130): Elaborated megafunction instantiation "BreathLED:breathled|lpm_divide:Div0" File: D:/Verilog/Watch/Flash.v Line: 41
+Info (12133): Instantiated megafunction "BreathLED:breathled|lpm_divide:Div0" with the following parameter: File: D:/Verilog/Watch/Flash.v Line: 41
+    Info (12134): Parameter "LPM_WIDTHN" = "26"
     Info (12134): Parameter "LPM_WIDTHD" = "16"
     Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
     Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
-Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_adm.tdf
-    Info (12023): Found entity 1: lpm_divide_adm File: D:/Verilog/Watch/db/lpm_divide_adm.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_gnh.tdf
-    Info (12023): Found entity 1: sign_div_unsign_gnh File: D:/Verilog/Watch/db/sign_div_unsign_gnh.tdf Line: 25
-Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_63f.tdf
-    Info (12023): Found entity 1: alt_u_div_63f File: D:/Verilog/Watch/db/alt_u_div_63f.tdf Line: 23
-Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "LEDR[1]" is stuck at GND File: D:/Verilog/Watch/Watch.v Line: 6
-    Warning (13410): Pin "LEDR[2]" is stuck at GND File: D:/Verilog/Watch/Watch.v Line: 6
-    Warning (13410): Pin "LEDR[3]" is stuck at GND File: D:/Verilog/Watch/Watch.v Line: 6
-    Warning (13410): Pin "LEDR[4]" is stuck at GND File: D:/Verilog/Watch/Watch.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_8dm.tdf
+    Info (12023): Found entity 1: lpm_divide_8dm File: D:/Verilog/Watch/db/lpm_divide_8dm.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_enh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_enh File: D:/Verilog/Watch/db/sign_div_unsign_enh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_23f.tdf
+    Info (12023): Found entity 1: alt_u_div_23f File: D:/Verilog/Watch/db/alt_u_div_23f.tdf Line: 23
+Info (12130): Elaborated megafunction instantiation "BreathLED:breathled|lpm_divide:Mod0" File: D:/Verilog/Watch/Flash.v Line: 42
+Info (12133): Instantiated megafunction "BreathLED:breathled|lpm_divide:Mod0" with the following parameter: File: D:/Verilog/Watch/Flash.v Line: 42
+    Info (12134): Parameter "LPM_WIDTHN" = "26"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_55m.tdf
+    Info (12023): Found entity 1: lpm_divide_55m File: D:/Verilog/Watch/db/lpm_divide_55m.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9nh File: D:/Verilog/Watch/db/sign_div_unsign_9nh.tdf Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_n2f.tdf
+    Info (12023): Found entity 1: alt_u_div_n2f File: D:/Verilog/Watch/db/alt_u_div_n2f.tdf Line: 23
+Warning (12241): 7 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1420 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 2239 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 52 output pins
-    Info (21061): Implemented 1363 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 29 warnings
-    Info: Peak virtual memory: 4876 megabytes
-    Info: Processing ended: Tue May 14 19:11:43 2024
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:11
+    Info (21061): Implemented 2182 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
+    Info: Peak virtual memory: 4892 megabytes
+    Info: Processing ended: Thu May 16 22:28:55 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:14
 
 

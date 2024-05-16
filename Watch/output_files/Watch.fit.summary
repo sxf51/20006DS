@@ -1,12 +1,12 @@
-Fitter Status : Successful - Tue May 14 19:12:52 2024
+Fitter Status : Successful - Thu May 16 22:30:33 2024
 Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
 Revision Name : Watch
 Top-level Entity Name : Watch
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 734 / 32,070 ( 2 % )
-Total registers : 372
+Logic utilization (in ALMs) : 1,152 / 32,070 ( 4 % )
+Total registers : 413
 Total pins : 57 / 457 ( 12 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 4,065,280 ( 0 % )

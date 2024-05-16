@@ -29,18 +29,21 @@ The 7-segments display hours, minutes and seconds. **KEY2** is the reset button,
 
 When time is up, the LED0 will be lit (reset button will not light this LED).
 
-LED[0] is always enabled whatever the mode is. And the reset button can always turn off this LED.
+LED[0] is always enabled no matter what the mode is. Also, the reset button can always turn off this LED.
 
 ### Game
 
-To do.
+Whack-a-mole.
+
+Press the appropriate key to receive a score of 1; failure to do so will result in the reset of the score.
 
 ### Mode
 
-**KEY3** can select different modes. And LED[9: 6] will show which mode it is.
+**KEY3** can select different modes. And LED[9: 6] shows which mode it is.
 
 |LED9|LED8|LED7|LED6|
 |---|---|---|---|
+|Clock|Stop Watch|Countdown Watch|Game|
 |mode: 2'b00|mode: 2'b01|mode: 2'b10|mode: 2'b11|
 
 ## Verilog Code Specification
