@@ -35,7 +35,11 @@ LED[0] is always enabled no matter what the mode is. Also, the reset button can 
 
 Whack-a-mole.
 
+The lighted LED is pseudorandom.
+
 Press the appropriate key to receive a score of 1; failure to do so will result in the reset of the score.
+
+**LED[5]** and **LED[1]** are "Breath LED". The lights change from dark to bright, and then from light to dark.
 
 ### Mode
 
@@ -45,5 +49,3 @@ Press the appropriate key to receive a score of 1; failure to do so will result 
 |---|---|---|---|
 |Clock|Stop Watch|Countdown Watch|Game|
 |mode: 2'b00|mode: 2'b01|mode: 2'b10|mode: 2'b11|
-
-## Verilog Code Specification
